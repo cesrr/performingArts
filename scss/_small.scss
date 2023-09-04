@@ -1,0 +1,118 @@
+/* Prevent adjustments of font size after orientation changes.  */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+    height: 100%;
+}
+
+/*---- apply a natural box layout model to all elements -------*/
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100%;
+    font-family: $defaultFont;
+    font-weight: $normalWeight;
+    color: $fontColor;
+    background-color: $secondaryColor;
+}
+
+.headerWrapper{
+    background-color: $secondaryColor;
+    font-family: $headingFont;
+}
+
+header{
+    display: flex;
+    align-items: flex-end;
+    padding: 1rem $gutter;
+    gap: 8px;
+
+    h1{
+        margin: 0;
+        font-size: 1.3rem;
+        font-weight: $normalWeight;
+    }
+    .tel{
+        text-decoration: none;
+        color: $fontColor;
+        font-size: .8rem;
+        padding: 0 0 .5rem .5rem;
+    }
+}
+
+.navWrapper{
+    background-color: $primaryColor;
+}
+nav{
+    ul{
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        font-size: 1.5rem;
+    }
+    a{
+        display: block;
+        padding: .5rem .5rem .5rem 1rem;
+        text-decoration: none;
+        color: white;
+
+        &:hover{
+            font-weight: $boldWeight;
+            color: rgb(255, 255, 255);
+        }
+    }
+    li.active{
+        background-color: #3a6081;
+        border-radius: 5px;
+        a{
+            color: white;
+        }
+    }
+}
+
+main{
+    .showGrid{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+        figure{
+            margin: 1rem;
+        }
+        img{
+            display: block;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            max-width: 100%;
+            height: auto;
+            border: 5px solid $primaryColor;
+        }
+        figcaption{
+            background-color: 
+            $primaryColor;
+            color: white;
+            font-weight: $boldWeight;
+            padding: .8rem;
+            border-bottom-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            text-align: center;
+        }
+    }
+    h1{
+        margin: 0;
+        padding: 2rem $gutter;
+    }
+    
+}
+.mainFooter{
+    background-color: $primaryColor;
+    color: white;
+    padding: .5rem 0 .3rem 0;
+    margin-top: 1rem;
+    text-align: center;
+}
