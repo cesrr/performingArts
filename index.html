@@ -4,91 +4,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Espinoza Center For The Arts website">
+    <meta name="description" content="Architecture Now - Home for Architecture">
     <meta name="author" content="Cesar Espinoza">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600&family=Libre+Baskerville&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+
     <link href="css/styles.min.css" rel="stylesheet">
 
-    <title>Home - Espinoza Center For The Arts</title>
+    <title>Home - Architecture Now</title>
 </head>
 
 <body>
     <div class="headerWrapper">
         <header>
-            <a href="#"><img src="images/logo1x.png" alt="ECFTA logo" width="50" height="50" srcset="images/logo1x.png 1x, images/logo2x.png 2x, images/logo3x.png 3x"></a>
-            <h1>Espinoza Center For The Arts</h1>
-            <a class="tel" href="tel:8015551234">801-555-1234</a>
+            <a href="#"><img src="images/logo1x.png" alt="Architecture Now Logo" width="60" height="60" srcset="images/logo1x.png 1x, images/logo2x.png 2x, images/logo3x.png 3x"></a>
+            <h1>Architecture Now</h1>
         </header>
     </div>
     <div class="navWrapper">
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li class="active"><a href="#">Showtimes</a></li>
-                <li><a href="#">Coming Soon</a></li>
-                <li><a href="#">Support</a></li>
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Trending</a></li>
                 <li><a href="#">About Us</a></li>
             </ul>
         </nav>
     </div>
     <div class="mainWrapper">
-        
         <main>
-            <h1>Showtimes</h1>
-            <div class="showGrid">
-                <figure>
-                    <img src="images/A-Raisin-in-the-Sun.webp" alt="poster for the play A Raisin in the sun" height="350" width="350" loading="lazy">
-                    <figcaption>January 3 - January 31</figcaption>
-                </figure>
-                <figure>
-                    <img src="images/death-of-sales.webp" alt="poster for the play death of a salesman" height="350" width="350" loading="lazy">
-                    <figcaption>February 1 - February 28</figcaption>
-                </figure>
-                <figure>
-                    <img src="images/dolly.webp" alt="poster for the play Hello Dolly!" height="350" width="350" loading="lazy">
-                    <figcaption>March 1 - March 31</figcaption>
-                </figure>
-                <figure>
-                    <img src="images/earnest.webp" alt="poster for the play The Importance of Being Earnest" height="350" width="350" loading="lazy">
-                    <figcaption>April 1 - April 30</figcaption>
-                </figure>
-                <figure>
-                    <img src="images/elf.webp" alt="poster for the play Elf: The Musical" height="350" width="350" loading="lazy">
-                    <figcaption>May 1 - May 31</figcaption>
-                </figure>
-                <figure>
-                    <img src="images/hamlet.webp" alt="poster for the play Hamlet" height="350" width="350" loading="lazy">
-                    <figcaption>June 1 - June 30</figcaption>
-                </figure>
-                <figure>
-                    <img src="images/long-day.webp" alt="poster for the play Long Day's Journey into Night" height="350" width="350" loading="lazy">
-                    <figcaption>July 1 - July 31</figcaption>
-                </figure>
-                <figure>
-                    <img src="images/romeojuliet.webp" alt="poster for the play Romeo and Juliet" height="350" width="350" loading="lazy">
-                    <figcaption>August 1 - August 31</figcaption>
-                </figure>
-                <figure>
-                    <img src="images/spongebob.webp" alt="poster for the play The Spongebob Musical" height="350" width="350" loading="lazy">
-                    <figcaption>September 1 - September 30</figcaption>
-                </figure>
-                <figure>
-                    <img src="images/streetcar.webp" alt="poster for the play A Streetcar Named Desire" height="350" width="350" loading="lazy">
-                    <figcaption>October 1 - October 31</figcaption>
-                </figure>
-                <figure>
-                    <img src="images/twelth-night.webp" alt="poster for the play Twelfth Night" height="350" width="350" loading="lazy">
-                    <figcaption>November 1 - November 30</figcaption>
-                </figure>
-                <figure>
-                    <img src="images/virgina.webp" alt="poster for the play Who's Afraid of Virgina Woolf" height="350" width="350" loading="lazy">
-                    <figcaption>December 1 - December 30</figcaption>
-                </figure>
-            </div>
-            
+            <picture class="hero">
+                <source media="(max-width: 700px)" srcset="images/heroSmall.jpg">
+                <source media="(max-width: 1100px)" srcset="images/heroMed.jpg">
+                <img src="images/heroLarge.jpg" alt="Architecture Now Hero Image">
+            </picture>
         </main>
     </div>
     <div class="mainFooter">
