@@ -78,6 +78,18 @@ main{
         height: auto;
     }
   }
+  video{
+    width: 90%;
+    margin-left: 5%
+  }
+
+  details{
+    margin: .5rem $gutter;
+    summary{
+        background-color: #6670c5;
+        padding: 1rem;
+    }
+  }
     
 }
 .mainFooter{

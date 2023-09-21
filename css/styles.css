@@ -384,6 +384,17 @@ main .hero img {
   width: 100%;
   height: auto;
 }
+main video {
+  width: 90%;
+  margin-left: 5%;
+}
+main details {
+  margin: 0.5rem 16px;
+}
+main details summary {
+  background-color: #6670c5;
+  padding: 1rem;
+}
 
 .mainFooter {
   background-color: #3D458D;
