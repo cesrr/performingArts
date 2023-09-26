@@ -34,42 +34,49 @@ header{
 
     h1{
         margin: 0;
-        font-size: 1.3rem;
+        font-size: 2rem;
         font-weight: $boldWeight;
     }
 }
 
-.navWrapper{
-    background-color: $primaryColor;
-}
+
 nav{
+
+    button{
+        background: transparent;
+        color: $fontColor;
+        border: none;
+        padding: .5rem;
+        font-size: 1.5rem;
+    }
+
     ul{
+        display: none;
         list-style-type: none;
         padding: 0;
         margin: 0;
         font-size: 1.5rem;
-        text-align: center;
+        text-align: left;
+    }
+    ul.open{
+        display: block;
     }
     a{
         display: block;
         padding: .5rem .5rem .5rem 1rem;
         text-decoration: none;
-        color: white;
-        font-weight: $boldWeight;
+        color: $fontColor;
+        font-weight: $lightWeight;
         &:hover{
-            text-decoration: underline;
-            text-decoration-style: wavy;
-            text-decoration-color: red;
+            color: #000000;
+            font-weight: $boldWeight;
         }
     }
     li.active{
-        background-color: #0a1152;
-        border-radius: 5px;
-        a{
-            color: white;
-        }
+       background-color: $primaryColor;
     }
 }
+
 
 main{
   .hero{

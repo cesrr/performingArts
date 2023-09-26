@@ -4,64 +4,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Architecture Now - Home for Architecture">
+    <meta name="description" content="The Dine-In Diner Menu page">
     <meta name="author" content="Cesar Espinoza">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
 
     <link href="css/styles.min.css" rel="stylesheet">
 
-    <title>Home - Architecture Now</title>
+    <title>Menu - The DINE-IN Diner</title>
 </head>
 
 <body>
     <div class="headerWrapper">
         <header>
             <a href="#"><img src="images/logo1x.png" alt="Architecture Now Logo" width="60" height="60" srcset="images/logo1x.png 1x, images/logo2x.png 2x, images/logo3x.png 3x"></a>
-            <h1>Architecture Now</h1>
+            <h1>The DINE-IN Diner</h1>
         </header>
     </div>
     <div class="navWrapper">
         <nav>
-            <ul>
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">Trending</a></li>
+            <button id="hamburger">&#9776;</button>
+            <ul id="primaryNav">
+                <li><a href="#">Home</a></li>
+                <li class="active"><a href="#">Menu</a></li>
+                <li><a href="#">Locations</a></li>
+                <li><a href="#">Careers</a></li>
                 <li><a href="#">About Us</a></li>
             </ul>
         </nav>
     </div>
     <div class="mainWrapper">
         <main>
-            <picture class="hero">
-                <source media="(max-width: 700px)" srcset="images/heroSmall.jpg">
-                <source media="(max-width: 1100px)" srcset="images/heroMed.jpg">
-                <img src="images/heroLarge.jpg" alt="Architecture Now Hero Image">
-            </picture>
-            <video controls>
-                <source src="media/trimmed_handbrake.mp4" type="video/mp4" />
-                <source src="media/trimmed_handbrake.webm" type="video/webm" />
-                <track
-                  label="English"
-                  kind="subtitles"
-                  srclang="en"
-                  src="media/vidEn.vtt"
-                  default />
-                <track
-                  label="Español"
-                  kind="subtitles"
-                  srclang="es"
-                  src="media/vidES.vtt"/>
-              </video>
-              <details>
-                <summary>Video Transcript</summary>
-                <p>hello for this video I will be reading the architecture Wikipedia page to provide some basic information on architecture now architecture is the art and technique of Designing and building as distinguished from the skills associated with construction it is both the process and the product of sketching conceiving planning designing and constructing buildings or other structures the term comes from Latin from Latin architectura from ancient Greek architect from Chief and creator architectural works in the material form of buildings are often perceived as cultural symbols and as works of art historical civilizations are often identified with their surviving architectural achievements the practice which began in the prehistoric era has been used as a way of expressing Culture by civilizations on all seven continents</p>
-              </details>
+            <h1>Menu</h1>
+            <div class="mainCards">
+                <section>
+                    <h2>Beverages</h2>
+                    <img src="images/beverages.webp" alt="Beverages" width="300" height="300">
+                    <p>At The DINE-IN, we believe that every meal should be complemented by the perfect beverage. Our carefully curated selection of beverages is designed to delight your taste buds and refresh your spirit.</p>
+                    <a href="#">View Beverages</a>
+                </section>
+                <section>
+                    <h2>Breakfast</h2>
+                    <img src="images/breakfast.webp" alt="Breakfast" width="300" height="300">
+                    <p>At The DINE-IN, we believe that breakfast is the most important meal of the day, and we're here to make it the most delicious one too. Join us every morning for a breakfast experience like no other.</p>
+                    <a href="#">View Breakfast</a>
+                </section>
+                <section>
+                    <h2>Lunch</h2>
+                    <img src="images/lunch.webp" alt="Lunch" width="300" height="300">
+                    <p>When noon rolls around, it's time to take a break from your busy day and savor the flavors of The DINE-IN. Our lunch menu is a culinary journey of taste and satisfaction, designed to recharge your energy and brighten your afternoon.</p>
+                    <a href="#">View Lunch</a>
+                </section>
+                <section>
+                    <h2>Dinner</h2>
+                    <img src="images/dinner.webp" alt="Dinner" width="300" height="300">
+                    <p>As the sun sets and the stars begin to twinkle, it's time to gather around the table for a memorable dinner experience at The DINE-IN. Our dinner menu is a symphony of flavors, carefully crafted to make your evenings unforgettable.</p>
+                    <a href="#">View Dinner</a>
+                </section>
+                <section>
+                    <h2>Dessert</h2>
+                    <img src="images/dessert.webp" alt="Dessert" width="300" height="300">
+                    <p>At The DINE-IN, we believe that dessert is more than just the final course—it's a delightful celebration of flavors and the perfect ending to your meal. Indulge your sweet tooth with our scrumptious dessert offerings.</p>
+                    <a href="#">View Dessert</a>
+                </section>
+            </div>
         </main>
     </div>
     <div class="mainFooter">
         <footer><p>Copyright © 2023 &bull; Cesar Espinoza</p></footer>
     </div>
+
+    <script src="js/scripts.js"></script>
 </body>
 
 </html>

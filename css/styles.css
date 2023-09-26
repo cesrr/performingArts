@@ -327,14 +327,14 @@ html {
 
 body {
   height: 100%;
-  font-family: "Raleway", sans-serif;
-  font-weight: 400;
-  color: black;
-  background-color: #F3F8FC;
+  font-family: "Oswald", sans-serif;
+  font-weight: 500;
+  color: #23225D;
+  background-color: #F5F1B5;
 }
 
 .headerWrapper {
-  background-color: #F3F8FC;
+  background-color: #F5F1B5;
 }
 
 header {
@@ -346,39 +346,41 @@ header {
 }
 header h1 {
   margin: 0;
-  font-size: 1.3rem;
+  font-size: 2rem;
   font-weight: 600;
 }
 
-.navWrapper {
-  background-color: #3D458D;
+nav button {
+  background: transparent;
+  color: #23225D;
+  border: none;
+  padding: 0.5rem;
+  font-size: 1.5rem;
 }
-
 nav ul {
+  display: none;
   list-style-type: none;
   padding: 0;
   margin: 0;
   font-size: 1.5rem;
-  text-align: center;
+  text-align: left;
+}
+nav ul.open {
+  display: block;
 }
 nav a {
   display: block;
   padding: 0.5rem 0.5rem 0.5rem 1rem;
   text-decoration: none;
-  color: white;
-  font-weight: 600;
+  color: #23225D;
+  font-weight: 400;
 }
 nav a:hover {
-  text-decoration: underline;
-  text-decoration-style: wavy;
-  text-decoration-color: red;
+  color: #000000;
+  font-weight: 600;
 }
 nav li.active {
-  background-color: #0a1152;
-  border-radius: 5px;
-}
-nav li.active a {
-  color: white;
+  background-color: #F1A557;
 }
 
 main .hero img {
@@ -398,7 +400,7 @@ main details summary {
 }
 
 .mainFooter {
-  background-color: #3D458D;
+  background-color: #F1A557;
   color: white;
   padding: 0.5rem 0 0.3rem 0;
   margin-top: 1rem;
@@ -411,21 +413,12 @@ main details summary {
     padding-bottom: 0;
     font-size: 2rem;
   }
-  header .tel {
-    padding: 0;
-    font-size: 1rem;
-  }
   nav ul {
-    display: flex;
     justify-content: space-around;
     font-size: 1.2rem;
-    margin: 1rem 16px;
   }
   nav a {
     padding: 0.8rem 1rem;
-  }
-  nav li.active {
-    border-radius: 0;
   }
   main .hero img {
     margin: 0;
@@ -436,7 +429,15 @@ main details summary {
     max-width: 75rem;
     margin: auto;
   }
-  nav ul {
+  nav button {
+    display: none;
+  }
+  nav ul, nav ul.open {
+    display: flex;
     justify-content: flex-end;
+  }
+  nav li.active {
+    background-color: transparent;
+    border-bottom: 2px solid #F1A557;
   }
 }
