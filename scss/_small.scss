@@ -76,28 +76,47 @@ nav{
        background-color: $primaryColor;
     }
 }
-
-
 main{
-  .hero{
-    img{
-        width: 100%;
-        height: auto;
+    h1{
+        margin: 0 $gutter;
     }
-  }
-  video{
-    width: 90%;
-    margin-left: 5%
-  }
+}
 
-  details{
-    margin: .5rem $gutter;
-    summary{
-        background-color: #6670c5;
+.mainCards{
+    padding: 0 $gutter;
+    section{
+        background-color: lighten($primaryColor, 10%);
+        border-radius: 5px;
         padding: 1rem;
+        margin: 1rem 0;
+
+        h2{
+            margin: 0 0 .5rem 0;
+            text-align: center;
+        }
+        img{
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin: 0;
+            border: 2px solid $secondaryColor;
+        }
+        p{
+            font-weight: $lightWeight;
+        }
+        a{
+            display: block;
+            text-align: center;
+            padding: .5rem;
+            background-color: $secondaryColor;
+            text-decoration: none;
+            border-radius: 5px;
+            &:hover{
+                background-color: darken($primaryColor, 10%);
+                color: white;
+            }
+        }
     }
-  }
-    
 }
 .mainFooter{
     background-color: $primaryColor;

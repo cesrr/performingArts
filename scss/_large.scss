@@ -16,3 +16,10 @@ nav{
         border-bottom: 2px solid $primaryColor;
     }
 }
+
+.mainCards{
+
+    section{
+        flex-basis: calc(33.333% - (($gutter * 2) / 3));
+    }
+}

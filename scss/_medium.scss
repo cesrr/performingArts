@@ -16,6 +16,14 @@ nav{
     }
    
 }
+.mainCards{
+    display: flex;
+    flex-wrap: wrap;
+    gap: $gutter;
+    section{
+        flex-basis: calc(50% - #{$gutter/2});
+    }
+}
 
 main{
     .hero{

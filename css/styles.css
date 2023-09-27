@@ -383,20 +383,44 @@ nav li.active {
   background-color: #F1A557;
 }
 
-main .hero img {
+main h1 {
+  margin: 0 16px;
+}
+
+.mainCards {
+  padding: 0 16px;
+}
+.mainCards section {
+  background-color: #f5be86;
+  border-radius: 5px;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+.mainCards section h2 {
+  margin: 0 0 0.5rem 0;
+  text-align: center;
+}
+.mainCards section img {
   width: 100%;
   height: auto;
+  border-radius: 5px;
+  margin: 0;
+  border: 2px solid #F5F1B5;
 }
-main video {
-  width: 90%;
-  margin-left: 5%;
+.mainCards section p {
+  font-weight: 400;
 }
-main details {
-  margin: 0.5rem 16px;
+.mainCards section a {
+  display: block;
+  text-align: center;
+  padding: 0.5rem;
+  background-color: #F5F1B5;
+  text-decoration: none;
+  border-radius: 5px;
 }
-main details summary {
-  background-color: #6670c5;
-  padding: 1rem;
+.mainCards section a:hover {
+  background-color: #ed8c28;
+  color: white;
 }
 
 .mainFooter {
@@ -420,6 +444,14 @@ main details summary {
   nav a {
     padding: 0.8rem 1rem;
   }
+  .mainCards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .mainCards section {
+    flex-basis: calc(50% - 8px);
+  }
   main .hero img {
     margin: 0;
   }
@@ -439,5 +471,8 @@ main details summary {
   nav li.active {
     background-color: transparent;
     border-bottom: 2px solid #F1A557;
+  }
+  .mainCards section {
+    flex-basis: calc(33.333% - 10.6666666667px);
   }
 }
