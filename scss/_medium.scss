@@ -32,3 +32,8 @@ main{
         }
     }
 }
+
+footer div{
+    display: grid;
+    grid-template-columns: auto auto;
+}
