@@ -399,6 +399,7 @@ nav li.active {
 
 .hero {
   position: relative;
+  margin: 0;
 }
 .hero img {
   width: 100%;
