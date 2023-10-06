@@ -4,95 +4,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="The Dine-In Diner Menu page">
+    <meta name="description" content="CARZONE Auto Dealer Home Page">
     <meta name="author" content="Cesar Espinoza">
+    
+    <script src="https://kit.fontawesome.com/ac282ae480.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/ac282ae480.js" crossorigin="anonymous"></script>
-
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;600&display=swap" rel="stylesheet">
     <link href="css/styles.min.css" rel="stylesheet">
 
-    <title>Menu - The DINE-IN Diner</title>
+    <title>Service - CARZONE</title>
 </head>
 
 <body>
     <div class="headerWrapper">
         <header>
-            <a href="#"><img src="images/logo1x.png" alt="Architecture Now Logo" width="60" height="60" srcset="images/logo1x.png 1x, images/logo2x.png 2x, images/logo3x.png 3x"></a>
-            <h1>The DINE-IN Diner</h1>
+            <a href="#"><img src="images/logo1x.png" alt="CARZONE Logo" width="171" height="37" srcset="images/logo1x.png 1x, images/logo2x.png 2x, images/logo3x.png 3x"></a>
+            <a class="number" href="tel:8015551234">801-555-1234</a>
         </header>
     </div>
     <div class="navWrapper">
         <nav>
-            <button id="hamburger">&#9776;</button>
+            <button id="hamburger"><span>&#9776;</span><span>x</span></button>
             <ul id="primaryNav">
                 <li><a href="#">Home</a></li>
-                <li class="active"><a href="#">Menu</a></li>
                 <li><a href="#">Locations</a></li>
-                <li><a href="#">Careers</a></li>
+                <li><a href="#">Inventory</a></li>
+                <li class="active"><a href="#">Service</a></li>
                 <li><a href="#">About Us</a></li>
             </ul>
         </nav>
     </div>
     <div class="mainWrapper">
         <main>
-            <h1>Menu</h1>
-            <div class="mainCards">
-                <section>
-                    <h2>Beverages</h2>
-                    <img src="images/beverages.webp" alt="Beverages" width="300" height="300">
-                    <p>At The DINE-IN, we believe that every meal should be complemented by the perfect beverage. Our carefully curated selection of beverages is designed to delight your taste buds and refresh your spirit.</p>
-                    <a href="#">View Beverages</a>
-                </section>
-                <section>
-                    <h2>Breakfast</h2>
-                    <img src="images/breakfast.webp" alt="Breakfast" width="300" height="300">
-                    <p>At The DINE-IN, we believe that breakfast is the most important meal of the day, and we're here to make it the most delicious one too. Join us every morning for a breakfast experience like no other.</p>
-                    <a href="#">View Breakfast</a>
-                </section>
-                <section>
-                    <h2>Lunch</h2>
-                    <img src="images/lunch.webp" alt="Lunch" width="300" height="300">
-                    <p>When noon rolls around, it's time to take a break from your busy day and savor the flavors of The DINE-IN. Our lunch menu is a culinary journey of taste and satisfaction, designed to brighten your afternoon.</p>
-                    <a href="#">View Lunch</a>
-                </section>
-                <section>
-                    <h2>Dinner</h2>
-                    <img src="images/dinner.webp" alt="Dinner" width="300" height="300">
-                    <p>As the sun sets and the stars begin to twinkle, it's time to gather around the table for a memorable dinner experience at The DINE-IN. Our dinner menu is a symphony of flavors, carefully crafted to make your evenings unforgettable.</p>
-                    <a href="#">View Dinner</a>
-                </section>
-                <section>
-                    <h2>Dessert</h2>
-                    <img src="images/dessert.webp" alt="Dessert" width="300" height="300">
-                    <p>At The DINE-IN, we believe that dessert is more than just the final course—it's a delightful celebration of flavors and the perfect ending to your meal. Indulge your sweet tooth with our scrumptious dessert offerings.</p>
-                    <a href="#">View Dessert</a>
-                </section>
+            <picture class="hero">
+                <source media="(max-width: 700px)" srcset="images/autoHeroSmall.webp">
+                <source media="(max-width: 1100px)" srcset="images/autoHeroMed.webp">
+                <img src="images/autoHeroLarge.webp" alt="Architecture Now Hero Image">
+                <p>Service</p>
+            </picture>
+
+            <p>At CARZONE, automotive excellence meets affordability. We take pride in being your trusted partner for all things automotive. Our team of skilled and experienced mechanics is committed to delivering top-notch service, ensuring your vehicle runs like a dream. We offer unparalleled expertise and care at prices that won't break the bank. Whether it's routine maintenance, complex repairs, or even just a friendly check-up, CARZONE is your go-to destination for reliable, efficient, and budget-friendly car care.</p>
+
+            <div class="services">
+                <div class="card">
+                    <img src="images/oilIcon.png" width="100" height="55" alt="oil can icon representing oil change">
+                    <h2>Oil Change</h2>
+                    <p>Regular oil changes are essential to keep your car running smoothly. Our team of experts will ensure your vehicle is in top shape.</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div class="card">
+                    <svg width="100" height="100" viewBox="0 0 100 100">
+                        <!-- Circle -->
+                        <circle cx="50" cy="50" r="40" fill="black"/>
+                        
+                        <!-- Exclamation mark -->
+                        <text x="50" y="70" font-size="60" fill="white" text-anchor="middle">!</text>
+                      </svg>
+                      
+                    <h2>Brake Repair</h2>
+                    <p>Brakes are one of the most important parts of your car. Our team will ensure your brakes are in top shape, keeping you safe on the road.</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div class="card">
+                    <svg width="100" height="100" viewBox="0 0 100 100">
+                        <!-- circle -->
+                        <circle cx="50" cy="85" r="12" fill="black" />
+                        
+                        <!-- main line -->
+                        <line x1="50" y1="85" x2="50" y2="20" stroke="black" stroke-width="5" stroke-linecap="round" />
+                        
+                        <!-- branches -->
+                        <line x1="50" y1="35" x2="70" y2="35" stroke="black" stroke-width="5" stroke-linecap="round"/>
+                        <line x1="50" y1="45" x2="70" y2="45" stroke="black" stroke-width="5" stroke-linecap="round" />
+                        <line x1="50" y1="55" x2="70" y2="55" stroke="black" stroke-width="5" stroke-linecap="round" />
+                    </svg>
+                      
+                    <h2>Coolant</h2>
+                    <p>Regular coolant maintenance is essential in preventing overheating and engine damage. Trust us to keep your engine in peak condition.</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div class="card">
+                    <img src="images/carIcon.png" width="100" height="81" alt="car icon representing tire alignment">     
+                    <h2>Tire Alignment</h2>
+                    <p> Don't let misaligned wheels affect your driving experience. Our tire alignment services are the solution you need.</p>
+                    <a href="#">Learn More</a>
+                </div>
+
             </div>
         </main>
     </div>
     <div class="mainFooter">
         <footer>
-            <div>
-                <section class="contact">
-                    <h2>Contact Us</h2>
-                    <p>The DINE-IN Diner</p>
-                    <p><a href="mailto:contact@dinein.com"><i class="fa-solid fa-envelope"></i>contact@dinein.com</a></p>
-                    <p><a href="#"><i class="fa-solid fa-globe"></i>dinein.com</a></p>
-                    <p><a href="tel:8015551234"><i class="fa-solid fa-phone"></i>801-555-1234</a></p>
-                </section>
-                <section class="social">
-                    <h2>Follow Us</h2>
-                    <p><a href="#"><i class="fab fa-facebook-square"></i>Facebook</a></p>
-                    <p><a href="#"><i class="fab fa-twitter-square"></i>Twitter</a></p>
-                    <p><a href="#"><i class="fab fa-instagram-square"></i>Instagram</a></p>
-                </section>
-                <section class="location">
-                    <h2>Visit Us</h2>
-                    <address>485 N State St<br> Orem, UT<br>84057</address>
-                </section>
-            </div>
             <p class="legal">Copyright © 2023 &bull; Cesar Espinoza</p>
         </footer>
     </div>

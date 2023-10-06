@@ -13,36 +13,39 @@ html {
     box-sizing: border-box;
 }
 
-body{
+body {
     height: 100%;
     font-family: $defaultFont;
     font-weight: $normalWeight;
-    color: $fontColor;
     background-color: $secondaryColor;
 }
 
-.headerWrapper{
+.headerWrapper {
     background-color: $secondaryColor;
 }
 
-header{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+header {
     padding: 1rem $gutter;
-    gap: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-    h1{
-        margin: 0;
-        font-size: 2rem;
+    .number {
+        text-decoration: none;
+        color: $fontColor;
         font-weight: $boldWeight;
+        font-size: 1.3rem;
+
+        &:hover {
+            color: $primaryColor;
+        }
     }
 }
 
 
-nav{
+nav {
 
-    button{
+    button {
         background: transparent;
         color: $fontColor;
         border: none;
@@ -50,7 +53,23 @@ nav{
         font-size: 1.5rem;
     }
 
-    ul{
+    button span:nth-child(1) {
+        display: block;
+    }
+
+    button span:nth-child(2) {
+        display: none;
+    }
+
+    button.open span:nth-child(1) {
+        display: none;
+    }
+
+    button.open span:nth-child(2) {
+        display: block;
+    }
+
+    ul {
         display: none;
         list-style-type: none;
         padding: 0;
@@ -58,120 +77,193 @@ nav{
         font-size: 1.5rem;
         text-align: left;
     }
-    ul.open{
+
+    ul.open {
         display: block;
     }
-    a{
+
+    a {
         display: block;
         padding: .5rem .5rem .5rem 1rem;
         text-decoration: none;
         color: $fontColor;
+        font-weight: $boldWeight;
+
+        &:hover {
+            text-decoration: underline;
+            text-decoration-color: $primaryColor;
+        }
+    }
+
+    li.active {
+        background-color: $primaryColor;
+    }
+}
+
+.hero {
+    position: relative;
+
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    p {
+        position: absolute;
+        padding-left: .5rem;
+        bottom: 0;
+        color: $secondaryColor;
         font-weight: $lightWeight;
-        &:hover{
-            color: #000000;
-            font-weight: $boldWeight;
-        }
-    }
-    li.active{
-       background-color: $primaryColor;
-    }
-}
-main{
-    h1{
-        margin: 0 $gutter;
+        font-size: 2.5rem;
     }
 }
 
-.mainCards{
+main p {
     padding: 0 $gutter;
-    section{
-        background-color: lighten($primaryColor, 10%);
-        border-radius: 5px;
-        padding: 1rem;
-        margin: 1rem 0;
+    font-size: 1.3rem;
+    line-height: 1.5;
+}
 
-        h2{
-            margin: 0 0 .5rem 0;
-            text-align: center;
-        }
-        img{
-            width: 100%;
-            height: auto;
-            border-radius: 5px;
-            margin: 0;
-            border: 2px solid $secondaryColor;
-        }
-        p{
-            font-weight: $lightWeight;
-        }
-        a{
-            display: block;
-            text-align: center;
-            padding: .5rem;
-            background-color: $secondaryColor;
-            text-decoration: none;
-            border-radius: 5px;
-            &:hover{
-                background-color: darken($primaryColor, 10%);
-                color: white;
+.services {
+    padding: 0 $gutter;
+    margin: 1rem 0;
+
+    .card {
+        border: $primaryColor solid 2px;
+        padding: 1rem;
+        margin: 2rem 0;
+        flex: 1 1 20rem;
+        text-align: center;
+        border-radius: 5px;
+
+
+        img {
+            font-size: 5rem;
+            margin-bottom: 1rem;
+
+            //animation
+            &:hover {
+                animation: myBounce 1s infinite;
             }
         }
     }
+
+    svg {
+        margin-bottom: 1rem;
+
+        //animation
+        &:hover {
+            animation: myBounce 1s infinite;
+        }
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        margin: 0;
+        font-weight: $lightWeight;
+    }
+
+    p {
+        font-size: 1rem;
+        margin: 2rem, 0;
+        text-align: left;
+    }
+
+    a {
+        text-decoration: none;
+        color: $secondaryColor;
+        font-weight: $boldWeight;
+        padding: 1rem;
+        border-radius: 5px;
+        background-color: $primaryColor;
+        margin: 1rem 0;
+        display: inline-block;
+
+        &:hover {
+            background-color: $secondaryColor;
+            color: $primaryColor;
+        }
+    }
 }
-.mainFooter{
+
+//animation
+@keyframes myBounce {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.mainFooter {
     background-color: $primaryColor;
     color: black;
     padding: .5rem 0 .3rem 0;
     margin-top: 1rem;
     text-align: center;
 
-    .contact{
+    .contact {
         margin: 1rem;
         padding: 0;
         text-align: left;
-        i{
+
+        i {
             margin-right: .5rem;
         }
-        p{
+
+        p {
             margin: .5rem 0;
             font-weight: $lightWeight;
         }
-        a{
+
+        a {
             color: black;
             text-decoration: none;
-            &:hover{
+
+            &:hover {
                 color: $secondaryColor;
             }
         }
     }
 
-    .social{
+    .social {
         margin: 1rem;
         padding: 0;
         text-align: left;
-        i{
+
+        i {
             margin-right: .5rem;
         }
-        p{
+
+        p {
             margin: .5rem 0;
             font-weight: $lightWeight;
         }
-        a{
+
+        a {
             color: black;
             text-decoration: none;
-            &:hover{
+
+            &:hover {
                 color: $secondaryColor;
             }
         }
     }
 
-    .location{
+    .location {
         text-align: left;
         margin: 1rem;
         font-weight: $lightWeight;
     }
 
-    p.legal{
+    p.legal {
         margin: 1rem;
         font-weight: $lightWeight;
         text-align: left;

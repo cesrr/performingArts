@@ -4,34 +4,47 @@ header{
     font-size: 2rem;
 }
 
+.navWrapper{
+    padding: 1rem 0;
+}
 
 nav{
-    ul{
-        justify-content: space-around;
-        font-size: 1.2rem;
-        // margin: 1rem $gutter;
+    button{
+        display: none;
     }
-    a{
-        padding: .8rem 1rem;
+    ul, ul.open{
+        display: flex;
+        justify-content: flex-start;
+        font-size: 1.3rem;
+        padding: 1rem, 0;
+        a{
+            &:hover{
+                color: $primaryColor;
+                text-decoration: none;
+            }
+        }
     }
-   
-}
-.mainCards{
-    display: flex;
-    flex-wrap: wrap;
-    gap: $gutter;
-    section{
-        flex-basis: calc(50% - #{$gutter/2});
-    }
-}
-
-main{
-    .hero{
-        img{
-            margin: 0;
+    li.active{
+        background-color: transparent;
+        a{
+            color: $primaryColor;
         }
     }
 }
+
+.hero{
+    p{
+        font-size: 4rem;
+        padding-left: 1rem;
+    }
+}
+
+.services{
+    display: flex;
+    flex-wrap: wrap;
+    gap: $gutter;
+}
+
 
 footer div{
     display: grid;
