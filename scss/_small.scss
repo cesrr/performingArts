@@ -116,6 +116,8 @@ nav {
         color: #fff;
         font-weight: $normalWeight;
         font-size: 2.5rem;
+        background: rgb(102, 106, 109);
+        background: linear-gradient(90deg, rgba(102, 106, 109, 0) 0%, rgba(102, 106, 109, 0.7161458333333333) 50%, rgba(102, 106, 109, 0) 100%);
     }
 }
 
@@ -202,26 +204,30 @@ main p {
     }
 }
 
-.reviews{
+.reviews {
     padding: 0 $gutter;
 
-    #revCards{
-        
-        div{
+    #revCards {
+
+        div {
             border: 2px solid $primaryColor;
             margin-bottom: 1rem;
-            h3{
+
+            h3 {
                 text-align: center;
             }
-            section{
+
+            section {
                 text-align: center;
             }
-            p{
+
+            p {
                 font-size: 1rem;
             }
 
         }
-        div img{
+
+        div img {
             width: 20px;
         }
     }
