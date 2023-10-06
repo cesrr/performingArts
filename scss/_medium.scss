@@ -45,6 +45,11 @@ nav{
     gap: $gutter;
 }
 
+#revCards{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $gutter;
+}
 
 footer div{
     display: grid;
