@@ -349,7 +349,7 @@ header .number {
   font-size: 1.3rem;
 }
 header .number:hover {
-  color: #EE060B;
+  color: #DF060B;
 }
 
 nav button {
@@ -391,10 +391,10 @@ nav a {
 }
 nav a:hover {
   text-decoration: underline;
-  text-decoration-color: #EE060B;
+  text-decoration-color: #DF060B;
 }
 nav li.active {
-  background-color: #EE060B;
+  background-color: #DF060B;
 }
 
 .hero {
@@ -409,7 +409,7 @@ nav li.active {
   position: absolute;
   padding: 0.5rem;
   bottom: 0;
-  color: #F2F2F2;
+  color: white;
   font-weight: 300;
   font-size: 2.5rem;
 }
@@ -425,7 +425,7 @@ main p {
   margin: 1rem 0;
 }
 .services .card {
-  border: #EE060B solid 2px;
+  border: #DF060B solid 2px;
   padding: 1rem;
   margin: 2rem 0;
   flex: 1 1 20rem;
@@ -461,13 +461,13 @@ main p {
   font-weight: 600;
   padding: 1rem;
   border-radius: 5px;
-  background-color: #EE060B;
+  background-color: #DF060B;
   margin: 1rem 0;
   display: inline-block;
 }
 .services a:hover {
   background-color: #F2F2F2;
-  color: #EE060B;
+  color: #DF060B;
 }
 
 @keyframes myBounce {
@@ -485,7 +485,7 @@ main p {
   padding: 0 16px;
 }
 .reviews #revCards div {
-  border: 2px solid #EE060B;
+  border: 2px solid #DF060B;
   margin-bottom: 1rem;
 }
 .reviews #revCards div h3 {
@@ -502,7 +502,7 @@ main p {
 }
 
 .mainFooter {
-  background-color: #EE060B;
+  background-color: #DF060B;
   color: white;
   padding: 0.5rem 0 0.3rem 0;
   margin-top: 1rem;
@@ -528,14 +528,14 @@ main p {
     padding: 1rem 0;
   }
   nav ul a:hover, nav ul.open a:hover {
-    color: #EE060B;
+    color: #DF060B;
     text-decoration: none;
   }
   nav li.active {
     background-color: transparent;
   }
   nav li.active a {
-    color: #EE060B;
+    color: #DF060B;
   }
   .hero figcaption {
     font-size: 4rem;
