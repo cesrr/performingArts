@@ -109,9 +109,9 @@ nav {
         display: block;
     }
 
-    p {
+    figcaption {
         position: absolute;
-        padding-left: .5rem;
+        padding: .5rem;
         bottom: 0;
         color: $secondaryColor;
         font-weight: $lightWeight;

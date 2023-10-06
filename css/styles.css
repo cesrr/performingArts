@@ -405,9 +405,9 @@ nav li.active {
   height: auto;
   display: block;
 }
-.hero p {
+.hero figcaption {
   position: absolute;
-  padding-left: 0.5rem;
+  padding: 0.5rem;
   bottom: 0;
   color: #F2F2F2;
   font-weight: 300;
@@ -537,9 +537,9 @@ main p {
   nav li.active a {
     color: #F22E3E;
   }
-  .hero p {
+  .hero figcaption {
     font-size: 4rem;
-    padding-left: 1rem;
+    padding: 1rem;
   }
   .services {
     display: flex;
@@ -561,8 +561,8 @@ main p {
     max-width: 75rem;
     margin: auto;
   }
-  .hero p {
-    padding-left: 2rem;
+  .hero figcaption {
+    padding: 2rem;
   }
   .services {
     flex-wrap: nowrap;
