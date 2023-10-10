@@ -28,18 +28,6 @@ header {
     padding: 1rem $gutter;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-
-    .number {
-        text-decoration: none;
-        color: $fontColor;
-        font-weight: $boldWeight;
-        font-size: 1.3rem;
-
-        &:hover {
-            color: $primaryColor;
-        }
-    }
 }
 
 
@@ -50,7 +38,9 @@ nav {
         color: $fontColor;
         border: none;
         padding: .5rem;
-        font-size: 1.5rem;
+        font-size: 2rem;
+        top: 0;
+        right: 0;
     }
 
     button span:nth-child(1) {
@@ -76,6 +66,10 @@ nav {
         margin: 0;
         font-size: 1.5rem;
         text-align: left;
+        position: absolute;
+        right: 0;
+        width: 50%;
+        background-color: $secondaryColor;
     }
 
     ul.open {
@@ -97,141 +91,78 @@ nav {
 
     li.active {
         background-color: $primaryColor;
+        a{
+            color: $secondaryColor;
+        }
     }
 }
 
-.hero {
-    position: relative;
-    margin: 0;
-    img {
+main{
+    h1{
+        padding: 0 $gutter;
+    }
+    img{
         width: 100%;
         height: auto;
         display: block;
+        
     }
-
-    figcaption {
-        position: absolute;
-        padding: .5rem;
-        bottom: 0;
-        color: #fff;
-        font-weight: $normalWeight;
-        font-size: 2.5rem;
-        background: rgb(102, 106, 109);
-        background: linear-gradient(90deg, rgba(102, 106, 109, 0) 0%, rgba(102, 106, 109, 0.7161458333333333) 50%, rgba(102, 106, 109, 0) 100%);
-    }
+} 
+.row{
+    // border: 1px dotted green;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: .5rem 0;
+    padding: 0 8px;
 }
+.column{
+    // border: 1px dotted orange;
+    padding: 0 8px;
+    margin: 0;
 
-main p {
-    padding: 0 $gutter;
-    font-size: 1.3rem;
-    line-height: 1.5;
-}
-
-.services {
-    padding: 0 $gutter;
-    margin: 1rem 0;
-
-    .card {
-        border: $primaryColor solid 2px;
-        padding: 1rem;
-        margin: 2rem 0;
-        flex: 1 1 20rem;
-        text-align: center;
-        border-radius: 5px;
-
-
-        img {
-            font-size: 5rem;
-            margin-bottom: 1rem;
-
-            //animation
-            &:hover {
-                animation: myBounce 1s infinite;
-            }
-        }
+    img{
+       border-radius: 10px;
     }
 
-    svg {
-        margin-bottom: 1rem;
-
-        //animation
-        &:hover {
-            animation: myBounce 1s infinite;
-        }
-    }
-
-    h2 {
-        font-size: 1.5rem;
-        margin: 0;
-        font-weight: $lightWeight;
-    }
-
-    p {
-        font-size: 1rem;
-        margin: 2rem 0;
-        text-align: left;
-    }
-
-    a {
+    a{
         text-decoration: none;
-        color: $secondaryColor;
-        font-weight: $boldWeight;
-        padding: 1rem;
-        border-radius: 5px;
-        background-color: $primaryColor;
-        margin: 1rem 0;
-        display: inline-block;
-
-        &:hover {
-            background-color: $secondaryColor;
-            color: $primaryColor;
+        color: $primaryColor;
+        margin: .5rem 0;
+        display: block;
+        &:hover{
+            text-decoration: underline;
+            text-decoration-color: $primaryColor;
         }
     }
 }
-
-//animation
-@keyframes myBounce {
-    0% {
-        transform: translateY(0px);
-    }
-
-    50% {
-        transform: translateY(-10px);
-    }
-
-    100% {
-        transform: translateY(0px);
+button{
+    background-color: $primaryColor;
+    color: $secondaryColor;
+    border: none;
+    padding: .5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    &:hover{
+        background-color: $secondaryColor;
+        color: $primaryColor;
     }
 }
-
-.reviews {
-    padding: 0 $gutter;
-
-    #revCards {
-
-        div {
-            border: 2px solid $primaryColor;
-            margin-bottom: 1rem;
-
-            h3 {
-                text-align: center;
-            }
-
-            section {
-                text-align: center;
-            }
-
-            p {
-                font-size: 1rem;
-            }
-
-        }
-
-        div img {
-            width: 20px;
-        }
+.rowBackground{
+    background-color: lighten($primaryColor, 55%);
+    padding: 1rem 0;
+    margin-top: 1.5rem;
+    h2{
+        margin: 0 0 1rem 0;
     }
 }
+//for loop to create media queries
+@for $i from 1 through 12 {
+   $w: calc($i / 12) * 100%;
+   .small-#{$i} {flex-basis: $w;}
+}
+
 
 .mainFooter {
     background-color: $primaryColor;

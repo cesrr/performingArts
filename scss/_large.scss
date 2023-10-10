@@ -1,17 +1,47 @@
-header, nav, main, footer{
+header, main, footer{
     max-width: 75rem;
     margin: auto;
 }
 
-.hero{
-    figcaption{
-        padding: 2rem;
+nav{
+    justify-self: end;
+    
+    button{
+        display: none;
+    }
+    ul, ul.open{
+        position: relative;
+        display: flex;
+        background-color: transparent;
+        width: auto;
+        
+    }
+    ul li a{
+        border-radius: 20px;
+        font-weight: $normalWeight;
+    }
+    li.active{
+        text-decoration: underline;
+        background-color: transparent;
+        text-decoration-color: $primaryColor;
+       a{
+        color: $fontColor;
+       }
+
     }
 }
 
-.services{
-    flex-wrap: nowrap;
+.rowBackground{
+    border-radius: 10px;
+    padding: 1rem;
 }
+
+//for loop to create media queries
+@for $i from 1 through 12 {
+    $w: calc($i / 12) * 100%;
+    .large-#{$i} {flex-basis: $w;}
+ }
+
 footer div{
     grid-template-columns: auto auto auto;
 

@@ -4,52 +4,16 @@ header{
     font-size: 2rem;
 }
 
-.navWrapper{
-    padding: 1rem 0;
+nav ul{
+    width: 300px;
 }
 
-nav{
-    button{
-        display: none;
-    }
-    ul, ul.open{
-        display: flex;
-        justify-content: flex-start;
-        font-size: 1.3rem;
-        padding: 1rem 0;
-        a{
-            &:hover{
-                color: $primaryColor;
-                text-decoration: none;
-            }
-        }
-    }
-    li.active{
-        background-color: transparent;
-        a{
-            color: $primaryColor;
-        }
-    }
-}
 
-.hero{
-    figcaption{
-        font-size: 4rem;
-        padding: 1rem;
-    }
-}
-
-.services{
-    display: flex;
-    flex-wrap: wrap;
-    gap: $gutter;
-}
-
-#revCards{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: $gutter;
-}
+//for loop to create media queries
+@for $i from 1 through 12 {
+    $w: calc($i / 12) * 100%;
+    .medium-#{$i} {flex-basis: $w;}
+ }
 
 footer div{
     display: grid;

@@ -327,7 +327,7 @@ html {
 
 body {
   height: 100%;
-  font-family: "Red Hat Display", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   background-color: #F2F2F2;
 }
@@ -340,24 +340,16 @@ header {
   padding: 1rem 16px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-}
-header .number {
-  text-decoration: none;
-  color: black;
-  font-weight: 600;
-  font-size: 1.3rem;
-}
-header .number:hover {
-  color: #DF060B;
 }
 
 nav button {
   background: transparent;
-  color: black;
+  color: #0D0D0D;
   border: none;
   padding: 0.5rem;
-  font-size: 1.5rem;
+  font-size: 2rem;
+  top: 0;
+  right: 0;
 }
 nav button span:nth-child(1) {
   display: block;
@@ -378,6 +370,10 @@ nav ul {
   margin: 0;
   font-size: 1.5rem;
   text-align: left;
+  position: absolute;
+  right: 0;
+  width: 50%;
+  background-color: #F2F2F2;
 }
 nav ul.open {
   display: block;
@@ -386,126 +382,128 @@ nav a {
   display: block;
   padding: 0.5rem 0.5rem 0.5rem 1rem;
   text-decoration: none;
-  color: black;
-  font-weight: 600;
+  color: #0D0D0D;
+  font-weight: 900;
 }
 nav a:hover {
   text-decoration: underline;
-  text-decoration-color: #DF060B;
+  text-decoration-color: #2B3083;
 }
 nav li.active {
-  background-color: #DF060B;
+  background-color: #2B3083;
+}
+nav li.active a {
+  color: #F2F2F2;
 }
 
-.hero {
-  position: relative;
-  margin: 0;
+main h1 {
+  padding: 0 16px;
 }
-.hero img {
+main img {
   width: 100%;
   height: auto;
   display: block;
 }
-.hero figcaption {
-  position: absolute;
-  padding: 0.5rem;
-  bottom: 0;
-  color: #fff;
-  font-weight: 400;
-  font-size: 2.5rem;
-  background: rgb(102, 106, 109);
-  background: linear-gradient(90deg, rgba(102, 106, 109, 0) 0%, rgba(102, 106, 109, 0.7161458333) 50%, rgba(102, 106, 109, 0) 100%);
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0.5rem 0;
+  padding: 0 8px;
 }
 
-main p {
-  padding: 0 16px;
-  font-size: 1.3rem;
-  line-height: 1.5;
-}
-
-.services {
-  padding: 0 16px;
-  margin: 1rem 0;
-}
-.services .card {
-  border: #DF060B solid 2px;
-  padding: 1rem;
-  margin: 2rem 0;
-  flex: 1 1 20rem;
-  text-align: center;
-  border-radius: 5px;
-}
-.services .card img {
-  font-size: 5rem;
-  margin-bottom: 1rem;
-}
-.services .card img:hover {
-  animation: myBounce 1s infinite;
-}
-.services svg {
-  margin-bottom: 1rem;
-}
-.services svg:hover {
-  animation: myBounce 1s infinite;
-}
-.services h2 {
-  font-size: 1.5rem;
+.column {
+  padding: 0 8px;
   margin: 0;
-  font-weight: 300;
 }
-.services p {
-  font-size: 1rem;
-  margin: 2rem 0;
-  text-align: left;
+.column img {
+  border-radius: 10px;
 }
-.services a {
+.column a {
   text-decoration: none;
-  color: #F2F2F2;
-  font-weight: 600;
-  padding: 1rem;
-  border-radius: 5px;
-  background-color: #DF060B;
-  margin: 1rem 0;
-  display: inline-block;
+  color: #2B3083;
+  margin: 0.5rem 0;
+  display: block;
 }
-.services a:hover {
-  background-color: #F2F2F2;
-  color: #DF060B;
+.column a:hover {
+  text-decoration: underline;
+  text-decoration-color: #2B3083;
 }
 
-@keyframes myBounce {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
-.reviews {
-  padding: 0 16px;
-}
-.reviews #revCards div {
-  border: 2px solid #DF060B;
-  margin-bottom: 1rem;
-}
-.reviews #revCards div h3 {
-  text-align: center;
-}
-.reviews #revCards div section {
-  text-align: center;
-}
-.reviews #revCards div p {
+button {
+  background-color: #2B3083;
+  color: #F2F2F2;
+  border: none;
+  padding: 0.5rem;
   font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
 }
-.reviews #revCards div img {
-  width: 20px;
+button:hover {
+  background-color: #F2F2F2;
+  color: #2B3083;
+}
+
+.rowBackground {
+  background-color: #d5d7f1;
+  padding: 1rem 0;
+  margin-top: 1.5rem;
+}
+.rowBackground h2 {
+  margin: 0 0 1rem 0;
+}
+
+.small-1 {
+  flex-basis: 8.3333333333%;
+}
+
+.small-2 {
+  flex-basis: 16.6666666667%;
+}
+
+.small-3 {
+  flex-basis: 25%;
+}
+
+.small-4 {
+  flex-basis: 33.3333333333%;
+}
+
+.small-5 {
+  flex-basis: 41.6666666667%;
+}
+
+.small-6 {
+  flex-basis: 50%;
+}
+
+.small-7 {
+  flex-basis: 58.3333333333%;
+}
+
+.small-8 {
+  flex-basis: 66.6666666667%;
+}
+
+.small-9 {
+  flex-basis: 75%;
+}
+
+.small-10 {
+  flex-basis: 83.3333333333%;
+}
+
+.small-11 {
+  flex-basis: 91.6666666667%;
+}
+
+.small-12 {
+  flex-basis: 100%;
 }
 
 .mainFooter {
-  background-color: #DF060B;
+  background-color: #2B3083;
   color: white;
   padding: 0.5rem 0 0.3rem 0;
   margin-top: 1rem;
@@ -518,41 +516,44 @@ main p {
     padding-bottom: 0;
     font-size: 2rem;
   }
-  .navWrapper {
-    padding: 1rem 0;
+  nav ul {
+    width: 300px;
   }
-  nav button {
-    display: none;
+  .medium-1 {
+    flex-basis: 8.3333333333%;
   }
-  nav ul, nav ul.open {
-    display: flex;
-    justify-content: flex-start;
-    font-size: 1.3rem;
-    padding: 1rem 0;
+  .medium-2 {
+    flex-basis: 16.6666666667%;
   }
-  nav ul a:hover, nav ul.open a:hover {
-    color: #DF060B;
-    text-decoration: none;
+  .medium-3 {
+    flex-basis: 25%;
   }
-  nav li.active {
-    background-color: transparent;
+  .medium-4 {
+    flex-basis: 33.3333333333%;
   }
-  nav li.active a {
-    color: #DF060B;
+  .medium-5 {
+    flex-basis: 41.6666666667%;
   }
-  .hero figcaption {
-    font-size: 4rem;
-    padding: 1rem;
+  .medium-6 {
+    flex-basis: 50%;
   }
-  .services {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
+  .medium-7 {
+    flex-basis: 58.3333333333%;
   }
-  #revCards {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
+  .medium-8 {
+    flex-basis: 66.6666666667%;
+  }
+  .medium-9 {
+    flex-basis: 75%;
+  }
+  .medium-10 {
+    flex-basis: 83.3333333333%;
+  }
+  .medium-11 {
+    flex-basis: 91.6666666667%;
+  }
+  .medium-12 {
+    flex-basis: 100%;
   }
   footer div {
     display: grid;
@@ -560,15 +561,73 @@ main p {
   }
 }
 @media only screen and (min-width: 60rem) {
-  header, nav, main, footer {
+  header, main, footer {
     max-width: 75rem;
     margin: auto;
   }
-  .hero figcaption {
-    padding: 2rem;
+  nav {
+    justify-self: end;
   }
-  .services {
-    flex-wrap: nowrap;
+  nav button {
+    display: none;
+  }
+  nav ul, nav ul.open {
+    position: relative;
+    display: flex;
+    background-color: transparent;
+    width: auto;
+  }
+  nav ul li a {
+    border-radius: 20px;
+    font-weight: 400;
+  }
+  nav li.active {
+    text-decoration: underline;
+    background-color: transparent;
+    text-decoration-color: #2B3083;
+  }
+  nav li.active a {
+    color: #0D0D0D;
+  }
+  .rowBackground {
+    border-radius: 10px;
+    padding: 1rem;
+  }
+  .large-1 {
+    flex-basis: 8.3333333333%;
+  }
+  .large-2 {
+    flex-basis: 16.6666666667%;
+  }
+  .large-3 {
+    flex-basis: 25%;
+  }
+  .large-4 {
+    flex-basis: 33.3333333333%;
+  }
+  .large-5 {
+    flex-basis: 41.6666666667%;
+  }
+  .large-6 {
+    flex-basis: 50%;
+  }
+  .large-7 {
+    flex-basis: 58.3333333333%;
+  }
+  .large-8 {
+    flex-basis: 66.6666666667%;
+  }
+  .large-9 {
+    flex-basis: 75%;
+  }
+  .large-10 {
+    flex-basis: 83.3333333333%;
+  }
+  .large-11 {
+    flex-basis: 91.6666666667%;
+  }
+  .large-12 {
+    flex-basis: 100%;
   }
   footer div {
     grid-template-columns: auto auto auto;
