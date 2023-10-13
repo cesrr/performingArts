@@ -372,8 +372,9 @@ nav ul {
   text-align: left;
   position: absolute;
   right: 0;
-  width: 50%;
-  background-color: #F2F2F2;
+  width: 60%;
+  background-color: #d5d7f1;
+  box-shadow: 2px 2px 4px rgb(0, 0, 0);
 }
 nav ul.open {
   display: block;
@@ -516,9 +517,6 @@ button:hover {
     padding-bottom: 0;
     font-size: 2rem;
   }
-  nav ul {
-    width: 300px;
-  }
   .medium-1 {
     flex-basis: 8.3333333333%;
   }
@@ -576,6 +574,7 @@ button:hover {
     display: flex;
     background-color: transparent;
     width: auto;
+    box-shadow: none;
   }
   nav ul li a {
     border-radius: 20px;

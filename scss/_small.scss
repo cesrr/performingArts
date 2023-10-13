@@ -68,8 +68,9 @@ nav {
         text-align: left;
         position: absolute;
         right: 0;
-        width: 50%;
-        background-color: $secondaryColor;
+        width: 60%;
+        background-color: lighten($primaryColor, 55%);
+        box-shadow: 2px 2px 4px rgba(0, 0, 0,);
     }
 
     ul.open {
