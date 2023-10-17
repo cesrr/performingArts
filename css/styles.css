@@ -338,16 +338,22 @@ body {
   grid-row-start: 1;
 }
 .headerWrapper header {
-  display: grid;
-  grid-template-columns: 135px auto 44px;
-  padding: 0.5rem 2vw;
+  padding: 1rem 16px;
+  display: flex;
+  justify-content: space-between;
 }
-.headerWrapper header h1 {
-  font-size: 2rem;
-  margin: 0;
-  padding: 0.5rem;
+
+nav button {
+  background: transparent;
   color: #0D0D0D;
-  font-family: "Bitter", serif;
+  border: none;
+  padding: 0.5rem;
+  font-size: 2rem;
+  top: 0;
+  right: 0;
+}
+nav button span:nth-child(1) {
+  display: block;
 }
 
 .navWrapper {
