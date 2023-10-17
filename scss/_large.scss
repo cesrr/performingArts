@@ -1,39 +1,25 @@
-header, main, footer{
+header, nav, main, footer{
     max-width: 75rem;
     margin: auto;
 }
 
-nav{
-    justify-self: end;
+.navWrapper{
+    nav{
     
-    button{
-        display: none;
-    }
-    ul, ul.open{
-        position: relative;
-        display: flex;
-        background-color: transparent;
-        width: auto;
-        box-shadow: none;
-    }
-    ul li a{
-        border-radius: 20px;
-        font-weight: $normalWeight;
-    }
-    li.active{
-        text-decoration: underline;
-        background-color: transparent;
-        text-decoration-color: $primaryColor;
-       a{
-        color: $fontColor;
-       }
-
+        ul{
+            justify-content: right;
+    
+            li a{
+                font-size: 1.25rem;
+            }
+        }
+        
     }
 }
 
-.rowBackground{
-    border-radius: 10px;
-    padding: 1rem;
+footer div{
+    grid-template-columns: auto auto auto;
+
 }
 
 //for loop to create media queries
@@ -41,8 +27,3 @@ nav{
     $w: calc($i / 12) * 100%;
     .large-#{$i} {flex-basis: $w;}
  }
-
-footer div{
-    grid-template-columns: auto auto auto;
-
-}

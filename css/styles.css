@@ -326,133 +326,129 @@ html {
 }
 
 body {
+  display: grid;
   height: 100%;
-  font-family: "Roboto", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: 400;
   background-color: #F2F2F2;
 }
 
 .headerWrapper {
   background-color: #F2F2F2;
+  grid-row-start: 1;
 }
-
-header {
-  padding: 1rem 16px;
-  display: flex;
-  justify-content: space-between;
+.headerWrapper header {
+  display: grid;
+  grid-template-columns: 135px auto 44px;
+  padding: 0.5rem 2vw;
 }
-
-nav button {
-  background: transparent;
-  color: #0D0D0D;
-  border: none;
-  padding: 0.5rem;
+.headerWrapper header h1 {
   font-size: 2rem;
-  top: 0;
-  right: 0;
+  margin: 0;
+  padding: 0.5rem;
+  color: #0D0D0D;
+  font-family: "Bitter", serif;
 }
-nav button span:nth-child(1) {
-  display: block;
+
+.navWrapper {
+  grid-row-start: 4;
 }
-nav button span:nth-child(2) {
-  display: none;
+.navWrapper nav {
+  height: 100vh;
 }
-nav button.open span:nth-child(1) {
-  display: none;
-}
-nav button.open span:nth-child(2) {
-  display: block;
-}
-nav ul {
-  display: none;
+.navWrapper nav ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
   font-size: 1.5rem;
-  text-align: left;
-  position: absolute;
-  right: 0;
-  width: 60%;
-  background-color: #d5d7f1;
-  box-shadow: 2px 2px 4px rgb(0, 0, 0);
+  background-color: #F2F2F2;
 }
-nav ul.open {
-  display: block;
-}
-nav a {
+.navWrapper nav a {
   display: block;
   padding: 0.5rem 0.5rem 0.5rem 1rem;
   text-decoration: none;
   color: #0D0D0D;
-  font-weight: 900;
+  font-weight: 600;
+  text-align: right;
 }
-nav a:hover {
+.navWrapper nav a:hover {
   text-decoration: underline;
-  text-decoration-color: #2B3083;
+  text-decoration-color: #154823;
 }
-nav li.active {
-  background-color: #2B3083;
+.navWrapper nav li.active {
+  background-color: #154823;
 }
-nav li.active a {
+.navWrapper nav li.active a {
   color: #F2F2F2;
 }
 
-main h1 {
-  padding: 0 16px;
-}
-main img {
-  width: 100%;
-  height: auto;
+div#hamburger a, div#closex a {
   display: block;
-}
-
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 0.5rem 0;
-  padding: 0 8px;
-}
-
-.column {
-  padding: 0 8px;
-  margin: 0;
-}
-.column img {
-  border-radius: 10px;
-}
-.column a {
   text-decoration: none;
-  color: #5A5D7B;
-  margin: 0.5rem 0;
+  color: #0D0D0D;
+  font-weight: 600;
+  font-size: 2rem;
+  text-align: right;
+}
+
+div#closex a {
+  padding: 0.5rem 2vw;
+}
+
+.mainWrapper {
+  grid-row-start: 2;
+}
+.mainWrapper main {
+  padding: 1rem 2vw;
+}
+.mainWrapper main .mainForm fieldset {
+  border: 2px solid #154823;
+  margin: 1rem 0;
+}
+.mainWrapper main .mainForm fieldset legend {
+  padding: 0 0.5rem;
+  font-size: 0.9rem;
+  color: #154823;
+}
+.mainWrapper main .mainForm label {
   display: block;
+  margin: 0.5rem 0;
+  font-size: 0.8rem;
 }
-.column a:hover {
-  text-decoration: underline;
-  text-decoration-color: #2B3083;
-}
-
-button {
-  background-color: #2B3083;
-  color: #F2F2F2;
-  border: none;
+.mainWrapper main .mainForm input[type=text], .mainWrapper main .mainForm input[type=email], .mainWrapper main .mainForm input[type=tel], .mainWrapper main .mainForm input[type=password], .mainWrapper main .mainForm input[type=date], .mainWrapper main .mainForm select {
+  display: block;
   padding: 0.5rem;
-  font-size: 1rem;
+  border: 1px solid #154823;
   border-radius: 5px;
-  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 300;
+  width: 50%;
 }
-button:hover {
-  background-color: #F2F2F2;
-  color: #2B3083;
+.mainWrapper main .mainForm button {
+  display: block;
+  margin: 1rem 0;
+  padding: 0.5rem;
+  border: 1px solid #154823;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-weight: 300;
+  background-color: #154823;
+  color: #F2F2F2;
+}
+.mainWrapper main .mainForm input:required {
+  border-left: 4px solid red;
+}
+.mainWrapper main .mainForm input:required:valid {
+  border-left: 4px solid #154823;
 }
 
-.rowBackground {
-  background-color: #d5d7f1;
-  padding: 1rem 0;
-  margin-top: 1.5rem;
-}
-.rowBackground h2 {
-  margin: 0 0 1rem 0;
+.footerWrapper {
+  grid-row-start: 3;
+  background-color: #154823;
+  color: white;
+  padding: 0.5rem 0 0.3rem 0;
+  margin-top: 1rem;
+  text-align: center;
 }
 
 .small-1 {
@@ -503,19 +499,40 @@ button:hover {
   flex-basis: 100%;
 }
 
-.mainFooter {
-  background-color: #2B3083;
-  color: white;
-  padding: 0.5rem 0 0.3rem 0;
-  margin-top: 1rem;
-  text-align: center;
-}
-
 @media only screen and (min-width: 33rem) {
-  header {
+  .headerWrapper {
+    grid-row-start: 1;
+  }
+  .headerWrapper header {
     align-items: center;
-    padding-bottom: 0;
-    font-size: 2rem;
+  }
+  .navWrapper {
+    grid-row-start: 2;
+    border-top: 2px solid #154823;
+    border-bottom: 2px solid #154823;
+  }
+  .navWrapper nav {
+    height: auto;
+  }
+  .navWrapper nav ul {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .navWrapper nav ul li a {
+    padding: 0.5rem 1rem;
+  }
+  #hamburger, #closex {
+    display: none;
+  }
+  .mainWrapper {
+    grid-row-start: 3;
+  }
+  .footerWrapper {
+    grid-row-start: 4;
+  }
+  .footerWrapper footer div {
+    display: grid;
+    grid-template-columns: auto auto;
   }
   .medium-1 {
     flex-basis: 8.3333333333%;
@@ -553,44 +570,20 @@ button:hover {
   .medium-12 {
     flex-basis: 100%;
   }
-  footer div {
-    display: grid;
-    grid-template-columns: auto auto;
-  }
 }
 @media only screen and (min-width: 60rem) {
-  header, main, footer {
+  header, nav, main, footer {
     max-width: 75rem;
     margin: auto;
   }
-  nav {
-    justify-self: end;
+  .navWrapper nav ul {
+    justify-content: right;
   }
-  nav button {
-    display: none;
+  .navWrapper nav ul li a {
+    font-size: 1.25rem;
   }
-  nav ul, nav ul.open {
-    position: relative;
-    display: flex;
-    background-color: transparent;
-    width: auto;
-    box-shadow: none;
-  }
-  nav ul li a {
-    border-radius: 20px;
-    font-weight: 400;
-  }
-  nav li.active {
-    text-decoration: underline;
-    background-color: transparent;
-    text-decoration-color: #2B3083;
-  }
-  nav li.active a {
-    color: #0D0D0D;
-  }
-  .rowBackground {
-    border-radius: 10px;
-    padding: 1rem;
+  footer div {
+    grid-template-columns: auto auto auto;
   }
   .large-1 {
     flex-basis: 8.3333333333%;
@@ -627,8 +620,5 @@ button:hover {
   }
   .large-12 {
     flex-basis: 100%;
-  }
-  footer div {
-    grid-template-columns: auto auto auto;
   }
 }

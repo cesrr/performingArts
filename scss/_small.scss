@@ -14,6 +14,7 @@ html {
 }
 
 body {
+    display: grid;
     height: 100%;
     font-family: $defaultFont;
     font-weight: $normalWeight;
@@ -22,7 +23,7 @@ body {
 
 .headerWrapper {
     background-color: $secondaryColor;
-}
+    grid-row-start: 1;
 
 header {
     padding: 1rem $gutter;
@@ -46,129 +47,125 @@ nav {
     button span:nth-child(1) {
         display: block;
     }
-
-    button span:nth-child(2) {
-        display: none;
-    }
-
-    button.open span:nth-child(1) {
-        display: none;
-    }
-
-    button.open span:nth-child(2) {
-        display: block;
-    }
-
-    ul {
-        display: none;
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-        font-size: 1.5rem;
-        text-align: left;
-        position: absolute;
-        right: 0;
-        width: 60%;
-        background-color: lighten($primaryColor, 55%);
-        box-shadow: 2px 2px 4px rgba(0, 0, 0,);
-    }
-
-    ul.open {
-        display: block;
-    }
-
-    a {
-        display: block;
-        padding: .5rem .5rem .5rem 1rem;
-        text-decoration: none;
-        color: $fontColor;
-        font-weight: $boldWeight;
-
-        &:hover {
-            text-decoration: underline;
-            text-decoration-color: $primaryColor;
-        }
-    }
-
-    li.active {
-        background-color: $primaryColor;
-        a{
-            color: $secondaryColor;
-        }
-    }
 }
 
-main{
-    h1{
-        padding: 0 $gutter;
-    }
-    img{
-        width: 100%;
-        height: auto;
-        display: block;
+.navWrapper{
+    grid-row-start: 4;
+
+    nav {
+        height: 100vh;
         
-    }
-} 
-.row{
-    // border: 1px dotted green;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: .5rem 0;
-    padding: 0 8px;
-}
-.column{
-    // border: 1px dotted orange;
-    padding: 0 8px;
-    margin: 0;
-
-    img{
-       border-radius: 10px;
-    }
-
-    a{
-        text-decoration: none;
-        color: #5A5D7B;
-        margin: .5rem 0;
-        display: block;
-        &:hover{
-            text-decoration: underline;
-            text-decoration-color: $primaryColor;
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            font-size: 1.5rem;
+            background-color: $secondaryColor;
+        }
+    
+        a {
+            display: block;
+            padding: .5rem .5rem .5rem 1rem;
+            text-decoration: none;
+            color: $fontColor;
+            font-weight: $boldWeight;
+            text-align: right;
+    
+            &:hover {
+                text-decoration: underline;
+                text-decoration-color: $primaryColor;
+            }
+        }
+    
+        li.active {
+            background-color: $primaryColor;
+            a{
+                color: $secondaryColor;
+            }
         }
     }
 }
-button{
-    background-color: $primaryColor;
-    color: $secondaryColor;
-    border: none;
-    padding: .5rem;
-    font-size: 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    &:hover{
-        background-color: $secondaryColor;
-        color: $primaryColor;
-    }
-}
-.rowBackground{
-    background-color: lighten($primaryColor, 55%);
-    padding: 1rem 0;
-    margin-top: 1.5rem;
-    h2{
-        margin: 0 0 1rem 0;
-    }
-}
-//for loop to create media queries
-@for $i from 1 through 12 {
-   $w: calc($i / 12) * 100%;
-   .small-#{$i} {flex-basis: $w;}
+
+div#hamburger a, div#closex a{
+    display: block;
+    text-decoration: none;
+    color: $fontColor;
+    font-weight: $boldWeight;
+    font-size: 2rem;
+    text-align: right;
 }
 
+div#closex a{
+    padding: .5rem 2vw;
+}
 
-.mainFooter {
+.mainWrapper{
+    grid-row-start: 2;
+
+    main{
+        padding: 1rem 2vw;
+
+        .mainForm{
+
+           fieldset{
+                border: 2px solid $primaryColor;
+                margin: 1rem 0;
+
+                legend{
+                    padding: 0 .5rem;
+                    font-size: .9rem;
+                    color: $primaryColor;
+                }
+           } 
+           label{
+               display: block;
+               margin: .5rem 0;
+               font-size: .8rem;
+           }
+
+           input[type=text], input[type=email], input[type=tel], input[type=password], input[type=date], select{
+               display: block;
+               padding: .5rem;
+               border: 1px solid $primaryColor;
+               border-radius: 5px;
+               font-size: .8rem;
+               font-weight: $lightWeight;
+               width: 50%;
+           }
+
+            button{
+               display: block;
+               margin: 1rem 0;
+               padding: .5rem;
+               border: 1px solid $primaryColor;
+               border-radius: 5px;
+               font-size: .9rem;
+               font-weight: $lightWeight;
+               background-color: $primaryColor;
+               color: $secondaryColor;
+           }
+
+           input:required{
+                border-left: 4px solid red;
+           }
+           input:required:valid{
+                border-left: 4px solid $primaryColor;
+           }
+        }
+    }
+}
+
+.footerWrapper {
+    grid-row-start: 3;
     background-color: $primaryColor;
     color: white;
     padding: .5rem 0 .3rem 0;
     margin-top: 1rem;
     text-align: center;
 }
+
+//for loop to create media queries
+@for $i from 1 through 12 {
+    $w: calc($i / 12) * 100%;
+    .small-#{$i} {flex-basis: $w;}
+ }
