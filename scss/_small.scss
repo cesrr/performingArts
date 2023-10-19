@@ -13,3 +13,109 @@ html {
     box-sizing: border-box;
 }
 
+body{
+    font-family: $defaultFont;
+}
+
+.headerWrapper{
+    background-color: $secondaryColor;
+
+    header{
+        display: grid;
+        grid-template-columns: 100px auto;
+        padding: 1rem $gutter;
+
+        #heading{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            font-family: $headingFont;
+            padding: 0 0 0 1rem;
+
+            h1{
+                font-size: 1.2rem;
+                margin: 0;
+            }
+
+            p{
+                font-size: .8rem;
+                margin: 0;
+            }
+            
+        }
+    }
+}
+
+.navWrapper{
+    background-color: $primaryColor;
+    nav button{
+        height: 44px;
+        width: 44px;
+        background: none;
+        border: none;
+        position: relative;
+
+        .line{
+            position: absolute;
+            height: 2px;
+            width: 60%;
+            left: 20%;
+            background-color: white;
+            transition: all .3s ease;
+        }
+
+        .top{
+            top: 29%;
+        }
+
+        .middle{
+            top: 48%;
+        }
+
+        .bottom{
+            top: 67%;
+        }
+    }
+}
+
+#hamburgerButt.open{
+    .top{
+        transform: rotate(45deg);
+        top: 48%;
+    }
+
+    .middle, .bottom{
+        transform: rotate(-45deg);
+        top: 48%;
+    }
+}
+
+nav{
+
+    ul{
+        display: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    ul li.active a{
+        background-color: lighten($primaryColor , 10%);
+    }
+
+    ul li a{
+        display: block;
+        padding: .75rem 2vw;
+        font-size: 1.1rem;
+        color: white;
+        text-decoration: none;
+        font-weight: $lightWeight;
+    }
+
+    ul li a:hover{
+        background-color: lighten($primaryColor , 10%);
+    }
+
+    ul.open{
+        display: block;
+    }
+}

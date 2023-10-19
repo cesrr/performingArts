@@ -8,6 +8,10 @@
     <meta name="author" content="Cesar Espinoza">
 
     <script src="https://kit.fontawesome.com/ac282ae480.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mohave:wght@300;400;600&family=Quicksand:wght@500&display=swap" rel="stylesheet">
 
     <link href="css/styles.min.css" rel="stylesheet">
 
@@ -17,21 +21,29 @@
 <body>
     <div class="headerWrapper">
         <header>
-            <a href="#"><img src="images/logo1x.png" alt="ESC Logo" width="130" height="111"
+            <a href="#"><img src="images/logo1x.png" alt="ESC Logo" width="100" height="85"
                     srcset="images/logo1x.png 1x, images/logo2x.png 2x, images/logo3x.png 3x"></a>
-            <div id="hamburger"><a href="#closex">&#9776;</a></div>
+
+            <div id="heading">
+                <h1>World Wide Web Developers Conference</h1>
+                <p>Develop the World</p>
+            </div>
+            
         </header>
     </div>
 
     <div class="navWrapper">
         <nav>
-            <div id="closex"><a href="#hamburger">x</a></div>
+            <button id="hamburgerButt">
+                <span class="line top"></span>
+                <span class="line middle"></span>
+                <span class="line bottom"></span>
+            </button>
             <ul id="primaryNav">
                 <li><a href="#">Home</a></li>
-                <li class="active"><a href="#">Enroll</a></li>
-                <li><a href="#">Academics</a></li>
-                <li><a href="#">Tuition</a></li>
-                <li><a href="#">Services</a></li>
+                <li class="active"><a href="#">Speakers</a></li>
+                <li><a href="#">Register</a></li>
+                <li><a href="#">About Us</a></li>
             </ul>
         </nav>
     </div>
@@ -46,7 +58,7 @@
             <p class="legal">Copyright © 2023 &bull; Cesar Espinoza</p>
         </footer>
     </div>
-
+    <script src="js/scripts.js"></script>
 </body>
 
 </html>
