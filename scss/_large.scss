@@ -2,28 +2,3 @@ header, nav, main, footer{
     max-width: 75rem;
     margin: auto;
 }
-
-.navWrapper{
-    nav{
-    
-        ul{
-            justify-content: right;
-    
-            li a{
-                font-size: 1.25rem;
-            }
-        }
-        
-    }
-}
-
-footer div{
-    grid-template-columns: auto auto auto;
-
-}
-
-//for loop to create media queries
-@for $i from 1 through 12 {
-    $w: calc($i / 12) * 100%;
-    .large-#{$i} {flex-basis: $w;}
- }
