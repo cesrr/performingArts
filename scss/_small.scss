@@ -119,3 +119,27 @@ nav{
         display: block;
     }
 }
+
+.hero{
+    position: relative;
+
+    div{
+        position: absolute;
+        top: 0;
+        left: 0px;
+        right: 0;
+        color: white;
+        background: rgb(64,63,63);
+        background: linear-gradient(90deg, rgba(64,63,63,0.774969362745098) 0%, rgba(64,63,63,0.5256696428571428) 49%, rgba(64,63,63,0.1951374299719888) 100%);
+        padding: 0 1rem;
+        h3{
+            text-shadow: 0 0 2px black;
+            font-size: 1.2rem;
+        }
+    }
+    video{
+        width: 100%;
+        height: auto;
+    }
+}
+

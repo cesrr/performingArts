@@ -413,6 +413,28 @@ nav ul.open {
   display: block;
 }
 
+.hero {
+  position: relative;
+}
+.hero div {
+  position: absolute;
+  top: 0;
+  left: 0px;
+  right: 0;
+  color: white;
+  background: rgb(64, 63, 63);
+  background: linear-gradient(90deg, rgba(64, 63, 63, 0.7749693627) 0%, rgba(64, 63, 63, 0.5256696429) 49%, rgba(64, 63, 63, 0.19513743) 100%);
+  padding: 0 1rem;
+}
+.hero div h3 {
+  text-shadow: 0 0 2px black;
+  font-size: 1.2rem;
+}
+.hero video {
+  width: 100%;
+  height: auto;
+}
+
 @media only screen and (min-width: 33rem) {
   .headerWrapper header {
     grid-template-columns: 100px 450px;
@@ -433,10 +455,16 @@ nav ul.open {
   nav ul li {
     list-style: none;
   }
+  .hero div h3 {
+    font-size: 1.5rem;
+  }
 }
 @media only screen and (min-width: 60rem) {
   header, nav, main, footer {
     max-width: 75rem;
     margin: auto;
+  }
+  .hero div h3 {
+    font-size: 2rem;
   }
 }
