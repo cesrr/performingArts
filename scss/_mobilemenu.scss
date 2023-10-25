@@ -27,7 +27,7 @@ nav button {
 		z-index: 998;
         font-weight: $lightWeight;
 	}
-    #primaryNav li.active a{background-color: rgba(0,0,0,0.25);}
+    #primaryNav li.active a{background-color: rgba(0,0,0,0.20);}
 	#primaryNav li a {
 		display: block;
 		width: 100%;
@@ -59,7 +59,7 @@ nav button {
     /*hide the sub menu items by default*/
 	#primaryNav li ul {
 		display: none;
-		background: rgba(0,0,0,.1);
+		background: rgba(0,0,0,0.30);
 		padding: 0;
 	}
 	#primaryNav li ul a {

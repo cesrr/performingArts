@@ -1,22 +1,66 @@
-.headerWrapper{
-   border: 3px solid red;
-    header{
-        grid-template-columns: 100px 450px;
-    }
-    
-}
+
 
 nav button{
     display: none;
 }
 
-nav{
+.navWrapper{
+    background-color: $menuColor;
+}
 
+nav{
+    
     ul{
         display: flex;
+        margin: 0;
+        padding: 0;
     }
 
     ul li{
         list-style: none;
+    }
+
+    ul li a{
+        display: block;
+        font-size: 1rem;
+        padding: .9rem 1.2rem;
+        text-decoration: none;
+        color: white;
+    }
+
+    #primaryNav li a:hover {
+		background-color: rgba(0,0,0,.5);
+	}
+
+    #primaryNav li.parent > a:after{
+        content: "\22EE";
+        font-size: 1rem;
+        color: white;
+        float: right;
+        padding-left: .3rem;
+    }
+
+    ul li ul{
+        display: flex;
+        flex-direction: column;
+        background-color: darken($menuColor, 5%);
+        width: 10rem;
+        position: absolute;
+        left: -999rem;
+        z-index: 99;
+    }
+
+    ul li ul li{
+        border-right: none;
+        border-top: solid 1px rgba(0,0,0,.2);
+    }
+
+    ul li:hover ul{
+        left: auto;
+        margin-left: 0;
+    }
+
+    li.active a {
+        background-color: rgba(0,0,0,0.25);
     }
 }
