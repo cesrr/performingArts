@@ -1,18 +1,7 @@
 .headerWrapper{
-   
+   border: 3px solid red;
     header{
         grid-template-columns: 100px 450px;
-        #heading{
-    
-            h1{
-                font-size: 1.5rem;
-                margin: 0;
-            }
-
-            p{
-                font-size: 1rem;
-            }
-        }
     }
     
 }
@@ -29,32 +18,5 @@ nav{
 
     ul li{
         list-style: none;
-    }
-}
-
-.hero{
-
-    div{
-        
-        h3{
-            font-size: 1.5rem;
-        }
-    }
-   
-}
-
-.card-back {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    transform: rotateX(-180deg);
-
-    h2{
-        font-size: 1.5rem;
-    }
-    p{
-        font-size: 1rem;
     }
 }
