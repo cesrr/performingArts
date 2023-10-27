@@ -341,7 +341,7 @@ body {
 .headerWrapper header .tel {
   text-align: right;
   text-decoration: none;
-  color: #657549;
+  color: #5B6743;
   font-weight: 300;
 }
 .headerWrapper header .tel:hover {
@@ -355,7 +355,7 @@ body {
 
 .serviceCards section {
   margin: 1rem 16px;
-  border: 3px solid #657549;
+  border: 3px solid #5B6743;
   background-color: #DDDFDA;
   border-radius: 5px;
 }
@@ -389,7 +389,7 @@ div.reviews {
   gap: 10px;
 }
 div.reviews section {
-  border: 3px solid #657549;
+  border: 3px solid #5B6743;
   background-color: #DDDFDA;
   padding: 1rem;
 }
