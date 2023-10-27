@@ -64,6 +64,11 @@ nav{
     }
 }
 
+.serviceCards{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
 div.reviews{
 
     section{

@@ -42,6 +42,38 @@ body {
     height: auto;
 }
 
+.serviceCards{
+
+    section{
+        margin: 1rem $gutter;
+        border: 3px solid $primaryColor;
+        background-color: $secondaryColor;
+        border-radius: 5px;
+        
+
+        figure{
+            position: relative;
+            margin: 0;
+        }
+
+        img{
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        img.border{
+            position: absolute;
+            bottom: 0;
+        }
+
+        h3, p{
+            padding: .5rem $gutter;
+            margin: 0;
+        }
+    }
+}
+
+
 h2{
     padding: 1rem $gutter;
     margin: 1rem 0 0 0;
@@ -50,11 +82,13 @@ h2{
 div.reviews{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    border: 3px solid $primaryColor;
-    background-color: $secondaryColor;
-    section{
-        padding: 1rem $gutter;
+    margin: 1rem $gutter;
+    gap: 10px;
 
+    section{
+        border: 3px solid $primaryColor;
+        background-color: $secondaryColor;
+        padding: 1rem;
         img{
             width: 100%;
             height: auto;
