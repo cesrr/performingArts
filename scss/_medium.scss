@@ -63,3 +63,13 @@ nav{
         background-color: rgba(0,0,0,0.25);
     }
 }
+
+div.reviews{
+
+    section{
+        display: grid;
+        grid-template-columns: 140px auto;
+        gap: 10px;
+        padding: 10px;
+    }
+}

@@ -353,6 +353,27 @@ body {
   height: auto;
 }
 
+h2 {
+  padding: 1rem 16px;
+  margin: 1rem 0 0 0;
+}
+
+div.reviews {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 3px solid #657549;
+  background-color: #DDDFDA;
+}
+div.reviews section {
+  padding: 1rem 16px;
+}
+div.reviews section img {
+  width: 100%;
+  height: auto;
+  -webkit-clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+          clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+}
+
 .footerWrapper {
   background-color: #DDDFDA;
   margin-top: 2rem;
@@ -496,6 +517,12 @@ body {
   nav li.active a {
     background-color: rgba(0, 0, 0, 0.25);
   }
+  div.reviews section {
+    display: grid;
+    grid-template-columns: 140px auto;
+    gap: 10px;
+    padding: 10px;
+  }
 }
 @media only screen and (min-width: 60rem) {
   header, nav, main, footer {
@@ -504,5 +531,9 @@ body {
   }
   nav ul li a {
     font-size: 0.9rem;
+  }
+  div.reviews section {
+    grid-template-columns: 200px auto;
+    gap: 10px;
   }
 }
