@@ -393,6 +393,9 @@ div.reviews section {
   background-color: #DDDFDA;
   padding: 1rem;
 }
+div.reviews section h3 {
+  margin: 0;
+}
 div.reviews section img {
   width: 100%;
   height: auto;

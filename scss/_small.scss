@@ -89,6 +89,10 @@ div.reviews{
         border: 3px solid $primaryColor;
         background-color: $secondaryColor;
         padding: 1rem;
+
+        h3{
+            margin: 0;
+        }
         img{
             width: 100%;
             height: auto;
