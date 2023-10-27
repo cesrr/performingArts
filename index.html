@@ -7,6 +7,8 @@
     <meta name="description" content="Earth Kingdom Landscaping">
     <meta name="author" content="Cesar Espinoza">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
     <script src="https://kit.fontawesome.com/ac282ae480.js" crossorigin="anonymous"></script>
 
     <link href="css/styles.min.css" rel="stylesheet">
@@ -44,7 +46,36 @@
 
     <div class="mainWrapper">
         <main>
-            
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                  <!-- Slides -->
+                  <div class="swiper-slide">
+                    <picture>
+                        <source srcset="images/sliderImg1-med.webp" media="(max-width: 767px)">
+                        <source srcset="images/sliderImg1-large.webp" media="(min-width: 768px)">
+                        <img src="images/sliderImg1-small.webp" alt="Outside area next to river">
+                    </picture>
+                  </div>
+                  <div class="swiper-slide">
+                    <picture>
+                        <source srcset="images/sliderImg2-med.webp" media="(max-width: 767px)">
+                        <source srcset="images/sliderImg2-large.webp" media="(min-width: 768px)">
+                        <img src="images/sliderImg2-small.webp" alt="Outside area next to river">
+                    </picture>
+                  </div>
+                  <div class="swiper-slide">
+                    <picture>
+                        <source srcset="images/sliderImg3-med.webp" media="(max-width: 767px)">
+                        <source srcset="images/sliderImg3-large.webp" media="(min-width: 768px)">
+                        <img src="images/sliderImg3-small.webp" alt="Outside area next to river">
+                    </picture>
+                  </div>
+                
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
         </main>
     </div>
     <div class="footerWrapper">
@@ -52,6 +83,7 @@
             <p class="legal">Copyright © 2023 &bull; Cesar Espinoza</p>
         </footer>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/scripts.js"></script>
 </body>
 

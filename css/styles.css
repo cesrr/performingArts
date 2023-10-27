@@ -348,6 +348,11 @@ body {
   text-decoration: underline;
 }
 
+.swiper, .swiper img {
+  width: 100%;
+  height: auto;
+}
+
 .footerWrapper {
   background-color: #DDDFDA;
   margin-top: 2rem;
