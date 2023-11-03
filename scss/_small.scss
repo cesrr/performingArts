@@ -22,18 +22,9 @@ body {
 
     header {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 75px 1fr auto;
         padding: 1rem $gutter;
-
-        .tel{
-            text-align: right;
-            text-decoration: none;
-            color: $fontColor;
-            font-weight: $lightWeight;
-            &:hover{
-                text-decoration: underline;
-            }
-        }
+        align-items: center;
     }
 }
 
@@ -42,6 +33,7 @@ body {
 .footerWrapper{
     background-color: $secondaryColor;
     margin-top: 2rem;
+
     footer{
         padding: 1rem $gutter;
         text-align: center;

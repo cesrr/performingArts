@@ -7,19 +7,3 @@ hb.addEventListener('click', () => {
 });
 
 console.log(pn);
-
-const swiper = new Swiper('.swiper', {
-    // Optional parameters
-    loop: true,
-    effect: 'fade',
-    speed: 1000,
-    // If we need pagination
-    pagination: {
-      el: '.swiper-pagination',
-    },
-
-    //autoplay
-    autoplay: {
-        delay: 5000,
-    }
-  });
