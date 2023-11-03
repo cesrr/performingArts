@@ -17,14 +17,83 @@ body {
     font-family: $defaultFont;
 }
 
+#pageWrapper{
+    position: relative;
+    overflow-x: hidden;
+}
+
+.moveOver>.content {
+    transform: translateX(-200px);
+}
+
+.content{
+    transition: transform .3s ease;
+}
+
 .headerWrapper {
     background-color: $secondaryColor;
 
     header {
         display: grid;
-        grid-template-columns: 75px 1fr auto;
+        grid-template-columns: 75px auto 48px;
         padding: 1rem $gutter;
         align-items: center;
+    }
+}
+
+button{
+    width: 48px;
+    height: 48px;
+    margin: 0;
+    align-self: start;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    text-align: right;
+}
+
+nav{
+    background: lighten($primaryColor, 20%);
+    width: 200px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    transform: translateX(100%);
+
+    div{
+        display: block;
+        text-align: center;
+        padding: 1.5rem;
+        font-size: 1.1rem;
+        background-color: $primaryColor;
+    }
+
+    ul{
+        list-style-type: none;
+        background-color: $secondaryColor;
+        margin: 0;
+        padding: 0;
+    }
+
+    ul li a{
+        text-decoration: none;
+        font-weight: $boldWeight;
+        display: block;
+        padding: .9rem .5rem;
+        text-align: right;
+        color: $fontColor;
+        border-bottom: 1px solid $fontColor;
+    }
+
+    ul li a:hover{
+        background-color: $primaryColor;
+    }
+
+    li.active a{
+        text-decoration: underline;
+        text-decoration-color: $primaryColor;
+        text-decoration-thickness: 3px;
     }
 }
 

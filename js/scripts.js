@@ -1,9 +1,8 @@
 const hb = document.querySelector('#hamburgerButt');
-const pn = document.querySelector('#primaryNav');
+const pw = document.querySelector('#pageWrapper');
 
 hb.addEventListener('click', () => {
-    hb.classList.toggle('open');
-    pn.classList.toggle('open');
+    pw.classList.toggle('moveOver');
 });
 
 console.log(pn);

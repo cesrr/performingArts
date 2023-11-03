@@ -329,14 +329,78 @@ body {
   font-family: "Fira Sans", sans-serif;
 }
 
+#pageWrapper {
+  position: relative;
+  overflow-x: hidden;
+}
+
+.moveOver > .content {
+  transform: translateX(-200px);
+}
+
+.content {
+  transition: transform 0.3s ease;
+}
+
 .headerWrapper {
   background-color: #F4ECC8;
 }
 .headerWrapper header {
   display: grid;
-  grid-template-columns: 75px 1fr auto;
+  grid-template-columns: 75px auto 48px;
   padding: 1rem 16px;
   align-items: center;
+}
+
+button {
+  width: 48px;
+  height: 48px;
+  margin: 0;
+  align-self: start;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  text-align: right;
+}
+
+nav {
+  background: #f9d684;
+  width: 200px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  transform: translateX(100%);
+}
+nav div {
+  display: block;
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 1.1rem;
+  background-color: #F5B522;
+}
+nav ul {
+  list-style-type: none;
+  background-color: #F4ECC8;
+  margin: 0;
+  padding: 0;
+}
+nav ul li a {
+  text-decoration: none;
+  font-weight: 600;
+  display: block;
+  padding: 0.9rem 0.5rem;
+  text-align: right;
+  color: #0D0D0D;
+  border-bottom: 1px solid #0D0D0D;
+}
+nav ul li a:hover {
+  background-color: #F5B522;
+}
+nav li.active a {
+  text-decoration: underline;
+  text-decoration-color: #F5B522;
+  text-decoration-thickness: 3px;
 }
 
 .footerWrapper {
