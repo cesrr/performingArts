@@ -7,3 +7,39 @@ nav ul li a{
     font-size: .9rem;
     // padding: .5rem 1.2rem;
 }
+
+#hamburgerButt{
+    display: none;
+}
+
+nav{
+    position: static;
+    transform: translateX(0);
+    width: auto;
+    background-color: $primaryColor;
+
+    div{
+        display: none;
+    }
+
+    ul{
+        display: flex;
+        margin-left: 2%;
+        padding: 0;
+        background-color: $primaryColor;
+
+        li a{
+            border: none;
+            padding: .9rem 1.2rem;
+        }
+    }
+
+    ul li a:hover{
+        background-color: $secondaryColor;
+    }
+
+    li.active a{
+        background-color: $secondaryColor;
+        text-decoration: none;
+    }
+}

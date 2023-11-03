@@ -342,9 +342,6 @@ body {
   transition: transform 0.3s ease;
 }
 
-.headerWrapper {
-  background-color: #F4ECC8;
-}
 .headerWrapper header {
   display: grid;
   grid-template-columns: 75px auto 48px;
@@ -428,5 +425,34 @@ nav li.active a {
   }
   nav ul li a {
     font-size: 0.9rem;
+  }
+  #hamburgerButt {
+    display: none;
+  }
+  nav {
+    position: static;
+    transform: translateX(0);
+    width: auto;
+    background-color: #F5B522;
+  }
+  nav div {
+    display: none;
+  }
+  nav ul {
+    display: flex;
+    margin-left: 2%;
+    padding: 0;
+    background-color: #F5B522;
+  }
+  nav ul li a {
+    border: none;
+    padding: 0.9rem 1.2rem;
+  }
+  nav ul li a:hover {
+    background-color: #F4ECC8;
+  }
+  nav li.active a {
+    background-color: #F4ECC8;
+    text-decoration: none;
   }
 }
