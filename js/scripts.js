@@ -5,4 +5,6 @@ hb.addEventListener('click', () => {
     pw.classList.toggle('moveOver');
 });
 
-console.log(pn);
+import {hotels} from './data.js';
+
+
