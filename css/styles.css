@@ -372,7 +372,7 @@ nav {
 nav div {
   display: block;
   text-align: center;
-  padding: 1.5rem;
+  padding: 1rem;
   font-size: 1.1rem;
   background-color: #F5B522;
 }
@@ -396,12 +396,58 @@ nav ul li a:hover {
 }
 nav li.active a {
   text-decoration: underline;
-  text-decoration-color: #F5B522;
-  text-decoration-thickness: 3px;
+  text-decoration-color: red;
+  text-decoration-thickness: 2px;
+}
+
+main h1 {
+  margin: 0;
+  padding: 1rem 16px;
+  background-color: #F5B522;
+  color: #0D0D0D;
+}
+
+#cards section {
+  background-color: #F4ECC8;
+  margin: 1rem 16px;
+  padding: 1rem 16px;
+  border-radius: 5px;
+  display: grid;
+  grid-template-areas: "name" "photo" "address" "phone";
+}
+#cards section img {
+  grid-area: photo;
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+#cards section h2 {
+  grid-area: name;
+  margin: 0;
+  margin-bottom: 0.5rem;
+}
+#cards section address {
+  grid-area: address;
+  margin-top: 0.5rem;
+}
+#cards section a {
+  grid-area: phone;
+  text-decoration: none;
+  color: #0D0D0D;
+  background-color: #F5B522;
+  display: block;
+  padding: 0.5rem;
+  border-radius: 5px;
+  text-align: center;
+  margin: 0.5rem 0;
+}
+#cards section a:hover {
+  background-color: #F4ECC8;
+  color: #0D0D0D;
 }
 
 .footerWrapper {
-  background-color: #F4ECC8;
+  background-color: #F5B522;
   margin-top: 2rem;
 }
 .footerWrapper footer {
@@ -418,6 +464,15 @@ nav li.active a {
   font-weight: 300;
 }
 
+@media only screen and (min-width: 33rem) {
+  #cards section {
+    gap: 8px;
+    grid-template-areas: "photo name" "photo address" "photo phone";
+  }
+  #cards img {
+    max-width: 400px;
+  }
+}
 @media only screen and (min-width: 60rem) {
   header, nav, main, footer {
     max-width: 75rem;
@@ -454,5 +509,15 @@ nav li.active a {
   nav li.active a {
     background-color: #F4ECC8;
     text-decoration: none;
+  }
+  main h1 {
+    background-color: transparent;
+  }
+  #cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  #cards img {
+    max-width: 350px;
   }
 }

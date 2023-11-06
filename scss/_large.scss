@@ -43,3 +43,16 @@ nav{
         text-decoration: none;
     }
 }
+
+main h1{
+    background-color: transparent;
+}
+
+#cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    img{
+        max-width: 350px;
+    }
+}
