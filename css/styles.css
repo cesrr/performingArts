@@ -329,19 +329,6 @@ body {
   font-family: "Fira Sans", sans-serif;
 }
 
-#pageWrapper {
-  position: relative;
-  overflow-x: hidden;
-}
-
-.moveOver > .content {
-  transform: translateX(-200px);
-}
-
-.content {
-  transition: transform 0.3s ease;
-}
-
 .headerWrapper header {
   display: grid;
   grid-template-columns: 75px auto 48px;
@@ -349,105 +336,46 @@ body {
   align-items: center;
 }
 
-button {
-  width: 48px;
-  height: 48px;
-  margin: 0;
-  align-self: start;
-  background: none;
-  border: none;
-  font-size: 2rem;
-  text-align: right;
+.navWrapper {
+  background-color: #FFB30D;
+  position: sticky;
+  top: 0;
 }
 
-nav {
-  background: #f9d684;
-  width: 200px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  transform: translateX(100%);
-}
-nav div {
-  display: block;
-  text-align: center;
-  padding: 1rem;
-  font-size: 1.1rem;
-  background-color: #F5B522;
-}
 nav ul {
   list-style-type: none;
-  background-color: #F4ECC8;
   margin: 0;
   padding: 0;
+  display: flex;
+  justify-content: space-around;
 }
-nav ul li a {
-  text-decoration: none;
-  font-weight: 600;
+nav ul a {
   display: block;
-  padding: 0.9rem 0.5rem;
-  text-align: right;
-  color: #0D0D0D;
-  border-bottom: 1px solid #0D0D0D;
+  text-align: center;
+  padding: 0.75rem;
+  text-decoration: none;
+}
+nav ul a img {
+  width: 25px;
+  height: 25px;
+}
+nav ul a span {
+  padding: 0.5rem;
+  display: none;
 }
 nav ul li a:hover {
-  background-color: #F5B522;
+  background-color: #ffc340;
 }
 nav li.active a {
-  text-decoration: underline;
-  text-decoration-color: red;
-  text-decoration-thickness: 2px;
+  background-color: #d99500;
 }
 
-main h1 {
-  margin: 0;
-  padding: 1rem 16px;
-  background-color: #F5B522;
-  color: #0D0D0D;
-}
-
-#cards section {
-  background-color: #F4ECC8;
-  margin: 1rem 16px;
-  padding: 1rem 16px;
-  border-radius: 5px;
-  display: grid;
-  grid-template-areas: "name" "photo" "address" "phone";
-}
-#cards section img {
-  grid-area: photo;
-  width: 100%;
-  height: auto;
-  border-radius: 5px;
-}
-#cards section h2 {
-  grid-area: name;
-  margin: 0;
-  margin-bottom: 0.5rem;
-}
-#cards section address {
-  grid-area: address;
-  margin-top: 0.5rem;
-}
-#cards section a {
-  grid-area: phone;
-  text-decoration: none;
-  color: #0D0D0D;
-  background-color: #F5B522;
-  display: block;
-  padding: 0.5rem;
-  border-radius: 5px;
-  text-align: center;
-  margin: 0.5rem 0;
-}
-#cards section a:hover {
-  background-color: #F4ECC8;
-  color: #0D0D0D;
+section {
+  height: 100vh;
 }
 
 .footerWrapper {
-  background-color: #F5B522;
+  background-color: #001542;
   margin-top: 2rem;
 }
 .footerWrapper footer {
@@ -465,12 +393,12 @@ main h1 {
 }
 
 @media only screen and (min-width: 33rem) {
-  #cards section {
-    gap: 8px;
-    grid-template-areas: "photo name" "photo address" "photo phone";
+  nav ul a img {
+    display: none;
   }
-  #cards img {
-    max-width: 400px;
+  nav ul a span {
+    display: block;
+    color: #181818;
   }
 }
 @media only screen and (min-width: 60rem) {
@@ -478,46 +406,18 @@ main h1 {
     max-width: 75rem;
     margin: auto;
   }
-  nav ul li a {
-    font-size: 0.9rem;
+  body {
+    display: grid;
+    grid-template-columns: 250px auto;
   }
-  #hamburgerButt {
-    display: none;
-  }
-  nav {
-    position: static;
-    transform: translateX(0);
-    width: auto;
-    background-color: #F5B522;
-  }
-  nav div {
-    display: none;
+  .navWrapper {
+    grid-row: 1/span 3;
+    position: relative;
   }
   nav ul {
-    display: flex;
-    margin-left: 2%;
-    padding: 0;
-    background-color: #F5B522;
-  }
-  nav ul li a {
-    border: none;
-    padding: 0.9rem 1.2rem;
-  }
-  nav ul li a:hover {
-    background-color: #F4ECC8;
-  }
-  nav li.active a {
-    background-color: #F4ECC8;
-    text-decoration: none;
-  }
-  main h1 {
-    background-color: transparent;
-  }
-  #cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-  #cards img {
-    max-width: 350px;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    position: fixed;
   }
 }

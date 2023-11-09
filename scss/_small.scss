@@ -27,61 +27,51 @@ body {
     }
 }
 
-button {
-    width: 48px;
-    height: 48px;
-    margin: 0;
-    align-self: start;
-    background: none;
-    border: none;
-    font-size: 2rem;
-    text-align: right;
+.navWrapper{
+    background-color: $menuColor;
+    position: sticky;
+    top: 0;
 }
 
 nav {
-    background: lighten($primaryColor, 20%);
-    width: 200px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    transform: translateX(100%);
-
-    div {
-        display: block;
-        text-align: center;
-        padding: 1rem;
-        font-size: 1.1rem;
-        background-color: $primaryColor;
-    }
 
     ul {
         list-style-type: none;
-        background-color: $secondaryColor;
         margin: 0;
         padding: 0;
-    }
+        display: flex;
+        justify-content: space-around;
 
-    ul li a {
-        text-decoration: none;
-        font-weight: $boldWeight;
-        display: block;
-        padding: .9rem .5rem;
-        text-align: right;
-        color: $fontColor;
-        border-bottom: 1px solid $fontColor;
+        a{
+            display: block;
+            text-align: center;
+            padding: .75rem;
+            text-decoration: none;
+    
+            img{
+                width: 25px;
+                height: 25px;
+            }
+            span{
+                padding: .5rem;
+                display: none;
+            }
+        }
     }
 
     ul li a:hover {
-        background-color: $primaryColor;
+        background-color: lighten($menuColor, 10%);
     }
 
     li.active a {
-        text-decoration: underline;
-        text-decoration-color: red;
-        text-decoration-thickness: 2px;
+        background-color: darken($menuColor, 10%);
     }
 }
+
+section{
+    height: 100vh;
+}
+
 
 
 .footerWrapper {
