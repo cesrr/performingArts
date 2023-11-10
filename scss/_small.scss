@@ -4,6 +4,7 @@ html {
     -webkit-text-size-adjust: none;
     text-size-adjust: none;
     height: 100%;
+    scroll-behavior: smooth;
 }
 
 /*---- apply a natural box layout model to all elements -------*/
@@ -15,16 +16,6 @@ html {
 
 body {
     font-family: $defaultFont;
-}
-
-.headerWrapper {
-
-    header {
-        display: grid;
-        grid-template-columns: 75px auto 48px;
-        padding: 1rem $gutter;
-        align-items: center;
-    }
 }
 
 .navWrapper{
@@ -40,7 +31,7 @@ nav {
         margin: 0;
         padding: 0;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
 
         a{
             display: block;
@@ -68,8 +59,37 @@ nav {
     }
 }
 
+main {
+    background-color: lighten($primaryColor, 50%);
+    color: $fontColor;
+}
+
+#hero{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 $gutter;
+
+    h1, h2{
+        margin: .5rem;
+    }
+}
+
 section{
     height: 100vh;
+    padding: 0 $gutter;
+
+    h1{
+        padding-top: 1rem;
+        margin: 0;
+        font-weight: $normalWeight;
+    }
+}
+
+#about{
+    background-color: $secondaryColor;
+    color: white;
 }
 
 

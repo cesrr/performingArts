@@ -20,5 +20,10 @@ nav{
         height: 100vh;
         justify-content: center;
         position: fixed;
+        width: 250px;
+
+        a{
+            text-align: right;
+        }
     }   
 }

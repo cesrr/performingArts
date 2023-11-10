@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Cesar Espinoza's Portfolio">
     <meta name="author" content="Cesar Espinoza">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 
     <script src="https://kit.fontawesome.com/ac282ae480.js" crossorigin="anonymous"></script>
 
@@ -18,7 +21,7 @@
     <div class="navWrapper">
         <nav>
             <ul id="primaryNav">
-                <li><a href="#about"><img src="images/user-solid.svg"><span>About Me</span></a></li>
+                <li class="active"><a href="#about"><img src="images/user-solid.svg"><span>About Me</span></a></li>
                 <li><a href="#projects"><img src="images/file-code-solid.svg"><span>Projects</span></a></li>
                 <li><a href="#education"><img src="images/building-columns-solid.svg"><span>Education</span></a></li>
                 <li><a href="#work"><img src="images/briefcase-solid.svg"><span>My Work</span></a></li>
@@ -28,7 +31,11 @@
     </div>
 
     <div class="mainWrapper">
-        <main>  
+        <main>
+            <div id="hero">
+                <h1>Cesar Espinoza</h1>
+                <h2>Web Developer</h2>
+            </div> 
             <section id="about">
                 <h1>About Me</h1>
             </section>
@@ -52,7 +59,7 @@
         </footer>
     </div>
     
-    <script src="js/scripts.js" type="module"></script>
+    <script src="js/scripts.js"></script>
 </body>
 
 </html>

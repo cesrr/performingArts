@@ -1,12 +1,5 @@
-const hb = document.querySelector('#hamburgerButt');
-const pw = document.querySelector('#pageWrapper');
-
-hb.addEventListener('click', () => {
-    pw.classList.toggle('moveOver');
-});
-
 // get me a list of all the items to watch
-const myListOfItems = document.querySelectorAll('fix')
+const myListOfItems = document.querySelectorAll('section')
 
 // a comma deliniated list of name/value pairs controlling how the observer works
 let observerOptions = {
@@ -15,7 +8,7 @@ let observerOptions = {
     //alters the viewport. negative values decrease the size.
     rootMargin: '0px 0px 0px 0px',
     //0 is barely showing, 1 is fully showing
-    threshold: fix
+    threshold: .25
   }
 
 // AllItems is a list of all elements being watched
@@ -32,7 +25,7 @@ function hiliteNav(x) {
 	document.querySelector('.active').classList.remove('active');
 	let theid = x.getAttribute('id');
 	let newActiveLink = document.querySelector(`[href="#${theid}"]`)
-	newActiveLink.parentElement.classList.add('fix');
+	newActiveLink.parentElement.classList.add('active');
 }
 
 //call the function for each element in the list

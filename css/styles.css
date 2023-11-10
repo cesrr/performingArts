@@ -318,6 +318,7 @@ html {
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
   height: 100%;
+  scroll-behavior: smooth;
 }
 
 /*---- apply a natural box layout model to all elements -------*/
@@ -326,14 +327,7 @@ html {
 }
 
 body {
-  font-family: "Fira Sans", sans-serif;
-}
-
-.headerWrapper header {
-  display: grid;
-  grid-template-columns: 75px auto 48px;
-  padding: 1rem 16px;
-  align-items: center;
+  font-family: "Jost", sans-serif;
 }
 
 .navWrapper {
@@ -347,7 +341,7 @@ nav ul {
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 nav ul a {
   display: block;
@@ -370,8 +364,35 @@ nav li.active a {
   background-color: #d99500;
 }
 
+main {
+  background-color: #427eff;
+  color: #181818;
+}
+
+#hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 16px;
+}
+#hero h1, #hero h2 {
+  margin: 0.5rem;
+}
+
 section {
   height: 100vh;
+  padding: 0 16px;
+}
+section h1 {
+  padding-top: 1rem;
+  margin: 0;
+  font-weight: 400;
+}
+
+#about {
+  background-color: #085454;
+  color: white;
 }
 
 .footerWrapper {
@@ -419,5 +440,9 @@ section {
     height: 100vh;
     justify-content: center;
     position: fixed;
+    width: 250px;
+  }
+  nav ul a {
+    text-align: right;
   }
 }
