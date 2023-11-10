@@ -521,12 +521,6 @@ section h1 {
 .footerWrapper footer p {
   margin: 0;
 }
-.footerWrapper footer a {
-  color: white;
-  text-decoration: none;
-  font-size: 0.8rem;
-  font-weight: 300;
-}
 
 @media only screen and (min-width: 33rem) {
   nav ul a img {
@@ -535,6 +529,36 @@ section h1 {
   nav ul a span {
     display: block;
     color: #181818;
+  }
+  section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  #about .aboutCard {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+  }
+  .projectGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  #resume {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  #resume .resumeCard {
+    width: 50%;
+  }
+  #contact form input, #contact form textarea {
+    width: 50%;
+  }
+  #contact form input[type=submit] {
+    width: 25%;
   }
 }
 @media only screen and (min-width: 60rem) {
@@ -559,5 +583,17 @@ section h1 {
   }
   nav ul a {
     text-align: right;
+  }
+  #about {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 2rem;
+  }
+  #about .aboutCard {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
   }
 }

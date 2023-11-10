@@ -2,16 +2,70 @@ nav {
 
     ul {
 
-        a{
-    
-            img{
+        a {
+
+            img {
                 display: none;
             }
-            span{
+
+            span {
                 display: block;
                 color: $fontColor;
             }
         }
+    }
+
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+#about {
+
+    .aboutCard {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1rem;
+    }
+
+}
+.projectGrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+#resume{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    .resumeCard{
+        width: 50%;
+     }
+}
+
+
+#contact{
+    
+
+    form{
+        
+
+        input, textarea{
+            width: 50%;
+        }
+
+        input[type="submit"]{
+            width: 25%;
+
+        }
+    
     }
 
 }
