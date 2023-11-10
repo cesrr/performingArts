@@ -24,7 +24,7 @@
                 <li class="active"><a href="#about"><img src="images/user-solid.svg"><span>About Me</span></a></li>
                 <li><a href="#projects"><img src="images/file-code-solid.svg"><span>Projects</span></a></li>
                 <li><a href="#education"><img src="images/building-columns-solid.svg"><span>Education</span></a></li>
-                <li><a href="#work"><img src="images/briefcase-solid.svg"><span>My Work</span></a></li>
+                <li><a href="#resume"><img src="images/briefcase-solid.svg"><span>My Work</span></a></li>
                 <li><a href="#contact"><img src="images/message-solid.svg"><span>Contact</span></a></li>
             </ul>
         </nav>
@@ -38,18 +38,62 @@
             </div> 
             <section id="about">
                 <h1>About Me</h1>
+                <div class="aboutCard">
+                    <img src="images/portProPic.webp" alt="Cesar Espinoza" width="500" height="449">
+                    <p>I'm a beginning web developer attending Utah Valley University. I am an avid learner and excel at problem solving. Outside of web development, I enjoy watching movies, TV, and hanging out with my partner and friends. </p>
+                </div>
+                
             </section>
             <section id="projects">
                 <h1>Projects</h1>
+                <div class="projectCard">
+                    <img src="images/img-vacationSite.jpg" alt="Vacation Site project" width="500" height="300">
+                    <p>Capstone project for Web Essentials Class - Summer 2023</p>
+                    <a href="https://dgm2120.espinozacorp.com/capstone/" target="_blank">View Project</a>
+                </div>
+                <div class="projectCard">
+                    <img src="images/starwars-char.png" alt="Star Wars JS project" width="500" height="300">
+                    <p>Javascript project for Scripting Essentials Class - Fall 2022</p>
+                    <a href="https://www.espinozacorp.com/personal-portfolio/sw-characters/index.html" target="_blank">View Project</a>
+                </div>
             </section>
             <section id="education">
                 <h1>Education</h1>
+                <div class="educationCard">
+                    <img src="images/uvuNew.webp" alt="UVU campus" width="500" height="279">
+                    <p>Currently attending UVU, working towards Bachelor's degree in Web Development and Design. Expected graduation, Fall 2025</p>
+                </div>
+                <div class="educationCard">
+                    <img src="images/degree.webp" alt="Generic degree" width="500" height="317">
+                    <p>Recieved Associate's in General Education, Fall 2017. Will receive Associate's in Web Development and Design, Spring 2024</p>
+                </div>
             </section>
-            <section id="work">
-                <h1>Work</h1>
+            <section id="resume">
+                <h1>Resume</h1>
+                <div class="resumeCard">
+                    <img src="images/resumeImg.webp" alt="Resume screenshot" width="500" height="649">
+                    <a href="other/FINAL RESUME copy 2.pdf" target="_blank">View Resume</a>
+                </div>
             </section>
             <section id="contact">
                 <h1>Contact</h1>
+                <form action="/submit_contact" method="post">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                    <input type="submit" value="Send Message">
+                </form>
+                <h3>Follow Me</h3>
+                <div class="socials">
+                    
+                    <a href="https://www.linkedin.com/in/cesrr/" target="_blank"><img src="images/icons8-linkedin-64.png"></a>
+                    <a href="https://github.com/cesrr" target="_blank"><img src="images/icons8-github-64.png"></a>
+                    <a href="#" target="_blank"><img src="images/icons8-instagram-64.png"></a>
+                    <a href="#" target="_blank"><img src="images/icons8-facebook-64.png"></a>
+                </div>
             </section>
         </main>
     </div>
