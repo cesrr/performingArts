@@ -554,11 +554,18 @@ section h1 {
   #resume .resumeCard {
     width: 50%;
   }
-  #contact form input, #contact form textarea {
+  #contact form input,
+  #contact form textarea {
     width: 50%;
   }
   #contact form input[type=submit] {
     width: 25%;
+  }
+  #contact .socials {
+    justify-content: flex-start;
+  }
+  #contact .socials a {
+    margin-right: 1rem;
   }
 }
 @media only screen and (min-width: 60rem) {

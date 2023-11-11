@@ -17,7 +17,7 @@ nav {
 
 }
 
-section{
+section {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -33,39 +33,51 @@ section{
     }
 
 }
-.projectGrid{
+
+.projectGrid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
 }
 
-#resume{
+#resume {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
 
-    .resumeCard{
+    .resumeCard {
         width: 50%;
-     }
+    }
 }
 
 
-#contact{
-    
+#contact {
 
-    form{
-        
 
-        input, textarea{
+    form {
+
+
+        input,
+        textarea {
             width: 50%;
         }
 
-        input[type="submit"]{
+        input[type="submit"] {
             width: 25%;
 
         }
-    
+
     }
+
+
+    .socials {
+        justify-content: flex-start;
+        
+        a{
+            margin-right: 1rem;
+        }
+    }
+
 
 }
